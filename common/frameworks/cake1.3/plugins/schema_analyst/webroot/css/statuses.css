@@ -1,0 +1,21 @@
+/**
+ * Custom CSS for statuses.
+ *
+ * Part of the SchemaAnalyst plugin.
+ *
+ * @author Frank de Graaf (Phally)
+ * @license MIT license
+ * @link http://github.com/phally
+ */
+
+.status-ok td {
+	background: #9f9;
+}
+
+.status-big td {
+	background: #0c0;
+}
+
+.status-caution td {
+	background: #fd0;
+}

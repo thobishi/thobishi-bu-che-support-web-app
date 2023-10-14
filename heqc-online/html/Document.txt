@@ -1,0 +1,24 @@
+SELECT
+count (*) AS total,
+DATE_FORMAT(active_processes.last_updated, "%Y-%m-%d") as lastUpdated,
+if (processes_id=12,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as Payment,
+if (processes_id=40,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as PaymentInvoice,
+if (processes_id=7,	concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as Checklisting,
+if (processes_id=47,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as Screening,
+if (processes_id=11,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as Evaluators,
+if (processes_id=33,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as ACMeeting,
+if (processes_id=85,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as ChooseEval_OS,
+if (processes_id=86,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as ACMeeting_OS,
+if (processes_id=87,concat(IFNULL(CHE_reference_code,"No ref"),",<br>",name),"") as ACReports_OS
+FROM active_processes
+LEFT JOIN processes ON active_processes.processes_ref = processes_id
+LEFT JOIN users ON active_processes.user_ref = user_id
+LEFT JOIN Institutions_application on Institutions_application.application_id = (IF ( InStr( active_processes.workflow_settings,  "application_id="  )  =0, 0,
+	mid( active_processes.workflow_settings,
+		InStr( active_processes.workflow_settings,  "application_id="  )  +15,
+		Locate(  "&", active_processes.workflow_settings, InStr( active_processes.workflow_settings,  "application_id="  )  +15  )  - ( InStr( active_processes.workflow_settings,  "application_id="  )  +15  )  )  )
+)
+WHERE active_processes.status = 0
+and processes_ref in (7,12,40,47,11,33,85,86,87)
+ORDER BY lastUpdated, Payment, PaymentInvoice, Checklisting, Screening, Evaluators, ACMeeting, ChooseEval_OS, ACMeeting_OS, ACReports_OS
+GROUP BY lastUpdated, Payment, PaymentInvoice, Checklisting, Screening, Evaluators, ACMeeting, ChooseEval_OS, ACMeeting_OS, ACReports_OS

@@ -1,0 +1,69 @@
+/* Menu
+----------------------------------*/
+div.ui-breadcrumbs {
+	margin-bottom: 10px !important;
+}
+
+.ui-breadcrumbs ul {
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+}
+
+.ui-breadcrumbs .ui-breadcrumbs {
+    margin-top: -3px;
+}
+.ui-breadcrumbs .ui-breadcrumb-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    /*display: inline;*/
+    width: 100%;
+	font-weight: normal;
+}
+.ui-breadcrumbs .ui-breadcrumb-item a {
+    text-decoration:none;
+    /*display:inline;*/
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+}
+.ui-breadcrumbs .ui-breadcrumb-item a.ui-state-hover,
+.ui-breadcrumbs .ui-breadcrumb-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+}
+
+div.ui-widget-header {
+	margin: 0;
+}
+
+div.ui-select {
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+ul.ui-select-list {
+	float: none;
+}
+div.ui-select-container {
+	margin: 0;
+}
+
+.ui-selected-items .ui-remove-item {
+	float: right;
+	padding: 5px;
+}
+
+.ui-autocomplete {
+		max-height: 200px;
+		overflow-y: auto;
+	}
+	
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+	height: 200px;
+}

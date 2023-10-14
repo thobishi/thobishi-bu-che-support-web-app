@@ -1,0 +1,551 @@
+<?php
+//require_once ('/var/www/html/common/workflow-1.0/class.workFlow.php');
+//require_once ('/var/www/html/common/workflow-1.0/class.octoDoc.php');
+//require_once ('/var/www/html/common/workflow-1.0/class.octoDocGen.php');
+
+/**
+ * application class specific to this application
+ *
+ * this class has non-genric functions specific to this workflow application.
+ * @author Diederik de Roos, Louwtjie du Toit, Reyno vd Hooven
+*/
+
+/*
+GRID FUNCTIONS
+-------------
+	gridDeleteRow
+	gridInsertRow
+	doPopulateGridFromTemplateTable
+	createHTMLGridHeading
+	createHTMLGridSQL
+	createHTMLGridInsertWithLookup
+	createHTMLGridInsertWithoutLookup
+	createHTMLGridFields
+	gridShow - Displays a grid with set rows specified in a lookup table. e.g. Institutional profile list of documents to upload
+				for a specified criteria.  Number of rows in child table are expected to be the same as in the lookup (template)
+				for that grid.  If they differ then the rows are inserted into the child table so that they match.
+	gridShowRowByRow - Displays all rows of a child table. By default inserts a row if none. Optional parameters to allow for
+						delete of rows or adding new rows.
+	gridShowTableByRow
+	gridDisplay
+	gridDisplayPerTable
+	displayFixedGrid
+
+*/
+
+	class HEQConline extends workFlow {
+
+		var $relativePath;
+		var $domReady = '';
+	/**
+	 * default constructor
+	 *
+	 * this function calls the {@link workFlow} function.
+	 * @author Diederik de Roos
+	 * @param integer $flowID
+	*/
+	function __construct ($flowID) {
+		$this->readPath ();
+		$this->workFlow ($flowID);
+		$this->populatePublicHolidays ();
+		$this->populatePrivatePublicDocs ();
+	}
+	
+	function HEQConline ($flowID) {
+		self::__construct ();
+	}
+
+	function readPath () {
+		global $path;
+		// echo '<pre>';
+		// print_r($path);
+		// echo '</pre>';
+		$this->relativePath = (isset($path))?($path):("");
+	}
+
+	function populatePublicHolidays () {
+		$this->public_holidays = array();
+		$SQL = "SELECT holiday_date FROM `lkp_public_holidays` WHERE holiday_date >= '".date("Y-m-d",mktime(0, 0, 0, date("m")-1, date("d"), date("Y")))."'";
+	//	$d = date("Y-m-d",mktime(0, 0, 0, date("m")-1, date("d"), date("Y")));
+		$conn = $this->getDatabaseConnection();
+	//	$sm = $conn->prepare($SQL);
+	//	$sm->bind_param("s", $d);
+//$sm->execute();
+		//$RS = $sm->get_result();
+		
+		$RS = mysqli_query($conn, $SQL);
+		while ($RS && ($row=mysqli_fetch_array($RS))) {
+			array_push($this->public_holidays, $row["holiday_date"]);
+		}
+		
+	}
+
+	function populatePrivatePublicDocs () {
+		$this->private_docs = $this->public_docs = "";
+		$SQL = "SELECT * FROM `lkp_application_docs`";
+		
+		$RS = mysqli_query($this->getDatabaseConnection(), $SQL);
+		while ($RS && ($row=mysqli_fetch_array($RS))) {
+			if (($row["private_public"] == 1) || ($row["private_public"] == 3)) {
+				$this->private_docs .= $row["lkp_application_docs_fieldName"];
+			}
+			if (($row["private_public"] == 2) || ($row["private_public"] == 3)) {
+				$this->public_docs .= $row["lkp_application_docs_fieldName"];
+			}
+		}
+		
+	}
+
+	function createCHE_reference ($division, $institution, $program, $progType) {
+		$conn = $this->getDatabaseConnection();
+		$newNum = 1;
+
+		// first find the last program
+		$SQL = "SELECT max(progNo) FROM CHE_referenceNo ".
+		"WHERE division = '$division' ".
+		"AND institution = '$institution' ".
+		"AND program = '$program'";
+		
+            //    $sm = $conn->prepare($SQL);
+		//$sm->bind_param("sss", $division, $institution, $program);
+		//$sm->execute();
+//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($conn, $SQL);
+		if ($row = mysqli_fetch_array ($rs)) {
+			$newNum = $row[0] + 1;
+		}
+
+		// insert a new program
+		$SQL = "INSERT INTO CHE_referenceNo VALUES"."(NULL, '$division', '$institution', '$program', $newNum, '$progType')";
+		
+//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("sssss", $division, $institution, $program, $newNum, $progType);
+		//$sm->execute();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+
+		// format the reference number
+		$reference = sprintf("%s/%s/%s%03u%s", $division, $institution, $program, $newNum, $progType);
+		
+		return ($reference);
+	}
+
+	/*
+	 * Louwtjie: 2004-08-11
+	 * function to return the last hei_code and update the database with the new one.
+	*/
+	function getLastHEIcode($prov) {
+		$conn = $this->getDatabaseConnection();
+		$SQL = "SELECT * FROM `last_hei_code` WHERE public_private='".$prov."'";
+	//	$sm = $conn->prepare($SQL);
+//$sm->bind_param("s", $prov);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		
+		$hei_code = "";
+		if ($rs && ($row=mysqli_fetch_array($rs))) {
+			$hei_code = $row["public_private"].sprintf("%03u", $row["hei_code_num"]);
+		}
+		$SQL = "UPDATE `last_hei_code` SET hei_code_num=(hei_code_num+1) WHERE public_private='".$prov."'";
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $prov);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		
+		return $hei_code;
+	}
+
+	function createInstitution_reference ($org) {
+		$conn = $this->getDatabaseConnection();
+		$newNum = 1;
+		$org_type = $org;
+		// first find the last program
+		$SQL = "SELECT max(orgNo) FROM Institution_referenceNo ".
+		"WHERE org_type = '$org' ";
+		//$sm = $conn->prepare($SQL);
+//$sm->bind_param("s", $org);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		if ($row = mysqli_fetch_array ($rs)) {
+			$newNum = $row[0] + 1;
+		}
+
+		// insert a new program
+		$SQL = "INSERT INTO Institution_referenceNo VALUES".
+		"(NULL, '$org_type', '$newNum')";
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("ss", $org_type, $newNum);
+		//$sm->execute();
+//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+
+		// format the reference number
+		$reference = sprintf("%s%03u", $org_type, $newNum);
+		
+		return ($reference);
+	}
+
+	/**
+	 * deletes a line of the program in site visit process
+	 * @author Louwtjie
+	 * 30-03-2004
+	 * @param string $table The MySQL table name which holds the program information.
+	 * @param string $keyFld The key field of the MySQL table.
+	 * @param mixed $keyFldValue The value of the key field.
+	*/
+	function deleteProgram($table, $keyFld, $keyFldValue){
+		$SQL ="DELETE FROM `".$table."` WHERE ".$keyFld."=".$keyFldValue;
+		$conn = $this->getDatabaseConnection();
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $keyFldValue);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		$rs = mysqli_query($conn, $SQL);
+		
+	}
+
+	/*
+	Louwtjie
+	30-03-2004
+	inserts a new program line in site visait process
+	*/
+	function saveProgram($table, $keyFld, $keyFldValue, $keyFld2="", $keyFldValue2=0){
+		$fld2_key = ($keyFld2>"")?(", ".$keyFld2):("");
+		$fld2_value = ($keyFldValue2>0)?(", '".$keyFldValue2."'"):("");
+
+		$SQL ="INSERT INTO `".$table."` (".$keyFld.$fld2_key.")";
+		$SQL .= " VALUES ('".$keyFldValue."'".$fld2_value.")";
+		
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		
+	}
+
+	/**
+	 * show the transport table for site visit process
+	 * @author Louwtjie
+	 * 30-03-2004
+	 * @return string $content All HTML used to display the transport table
+	*/
+	function showTransport($siteVisit_id, $table, $keyFld, $fieldsArr, $sizeOfFld=10, $report=0, $tableHeading="", $numEntires=0, $evalsArr){
+		$SQL = "SELECT * FROM `".$table."` WHERE siteVisit_ref=".$siteVisit_id;
+		
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $siteVisit_id);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		$numAlready = mysqli_num_rows($rs);
+		if ( !($numAlready == $numEntires) ) {
+			for ($i=0; $i<$numEntires; $i++) {
+				$this->saveProgram("siteVisit_transport", "siteVisit_ref", $this->dbTableInfoArray["siteVisit"]->dbTableCurrentID, "application_ref, site_ref", $this->getValueFromTable("siteVisit", "siteVisit_id", $this->dbTableInfoArray["siteVisit"]->dbTableCurrentID, "application_ref")."','".$this->getValueFromTable("siteVisit", "siteVisit_id", $this->dbTableInfoArray["siteVisit"]->dbTableCurrentID, "site_ref"));
+			}
+		}
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		$count=0;
+		$message = "";
+		$content = "";
+		$content .=  "<table cellpadding='2' cellspacing='2' align='center' border='1'>";
+		$content .=  "<tr>";
+		if (is_array($tableHeading) && (count($tableHeading) > 0)) {
+			foreach ($tableHeading AS $key=>$value) {
+				$content .= '<td colspan="'.$value.'" align="center"><b>'.$key.'</b></td>';
+			}
+			$content .=  "</tr><tr>";
+		}
+		foreach ($fieldsArr AS $value) {
+			$content .=  '<td>'.$value.'</td>';
+			$count++;
+		}
+		$content .=  "</tr>";
+		$array_keys = array_keys($fieldsArr);
+		$cc = 0;
+		while ($row = mysqli_fetch_assoc($rs)){
+			$content .=  "<tr>";
+			foreach ($row AS $key=>$value) {
+				if (stristr($key, "time") > "") {
+					$content .=  '<td><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:showTime(\'GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\', \''.$value.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_time.gif" border=0></a></td>';
+				}else if (stristr($key, "date") > "") {
+					$content .=  '<td><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:show_calendar(\'defaultFrm.GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_calendar.gif" border=0></a></td>';
+				}else if (stristr($key, "Persnr_ref") > "") {
+					$new = explode("|", $evalsArr[$cc]);
+					$value1 = $new[0];
+					$value2 = $new[1];
+					$content .=  "<td><input size='".$sizeOfFld."' type='HIDDEN' ID='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' name='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' value='".$value1."'>";
+					$content .=  $value2."</td>";
+				}else {
+					if (in_array($key, $array_keys)) {
+						$content .=  "<td><input size='".$sizeOfFld."' type='TEXT' ID='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' name='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' value='".$value."'></td>";
+					}
+				}
+			}
+			// louwtjie:  $content .= '<tr><td><input type="HIDDEN" name="GRID_save_'.$row[$keyFld].'" value="1"></td></tr>';
+			$cc++;
+		}
+		$content .=  "</table>";
+		
+		return $content;
+	}
+
+	function generateTransportProgram ($siteVisit_id, $table, $keyFld, $fieldsArr, $sizeOfFld=10, $report=0, $tableHeading="", $numEntires=0, $evalsArr) {
+		$SQL = "SELECT Persnr_ref, airfare_date, airfare_from, airfare_to, airfare_time, airfare_reference, shuttle_date, shuttle_from, shuttle_to, shuttle_time, shuttle_reference, car_hire_date, car_hire_reference FROM `".$table."` WHERE siteVisit_ref=".$siteVisit_id;
+		//$conn = $this->getDatabaseConnection();
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $siteVisit_id);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		$content = "";
+		$content .=  $this->makeTop($this->dbTableInfoArray["Institutions_application"]->dbTableCurrentID);
+		$content .=  "<table width='95%' cellpadding='2' cellspacing='2' align='center' border='1'>";
+		$content .=  "<tr>";
+		if (is_array($tableHeading) && (count($tableHeading) > 0)) {
+			foreach ($tableHeading AS $key=>$value) {
+				$content .= '<td colspan="'.$value.'" align="center"><b>'.$key.'</b></td>';
+			}
+			$content .=  "</tr><tr>";
+		}
+		foreach ($fieldsArr AS $value) {
+			$content .=  '<td>'.$value.'</td>';
+		}
+		$content .=  "</tr>";
+		$array_keys = array_keys($fieldsArr);
+		while ($row = mysqli_fetch_assoc($rs)){
+			$content .=  "<tr>";
+			foreach ($row AS $key=>$value) {
+				if ($key == 'Persnr_ref') $value = $this->getValueFromTable("Eval_Auditors", "Persnr", $value, "Names")." ".$this->getValueFromTable("Eval_Auditors", "Persnr", $value, "Surname");
+				$content .=  '<td>'.$value.'</td>';
+			}
+			$content .=  "</tr>";
+		}
+		$content .=  "</table>";
+		
+		return $content;
+	}
+
+	/*
+	 * Louwtjie
+	 * 30-03-2004
+	 * generate the site visit programme to send to institution
+	*/
+
+	function generateSiteProgram ($siteVisit_id, $table, $keyFld, $fieldsArr, $sizeOfFld=10, $report=0, $tableHeading="") {
+		$count=0;
+		$content = "";
+		if ($report) {
+			$content .=  $this->makeTop($this->dbTableInfoArray["Institutions_application"]->dbTableCurrentID);
+		}
+		$content .=  "<table width='95%' cellpadding='2' cellspacing='2' align='center' border='1'>";
+		$content .=  "<tr>";
+
+		foreach ($fieldsArr AS $value) {
+			$content .=  '<td valign="top" class="oncolourb">'.$value.'</td>';
+			$count++;
+		}
+		$content .=  "</tr>";
+		$array_keys = array_keys($fieldsArr);
+		$SQL = "SELECT ".implode(", ", array_keys($fieldsArr))."  FROM `".$table."` WHERE siteVisit_ref=".$siteVisit_id." ORDER BY ".$keyFld;
+		$conn = $this->getDatabaseConnection();
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("ss", $siteVisit_id, $keyFld);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+
+		while ($row = mysqli_fetch_assoc($rs)){
+			$content .=  "<tr>";
+			foreach ($row AS $key=>$value) {
+				$content .=  '<td valign="top">'.$value.'</td>';
+			}
+			$content .=  "</tr>";
+		}
+		$content .=  "</table>";
+		
+		return $content;
+	}
+
+	/*
+	Louwtjie
+	30-03-2004
+	show the program table for site visit process
+	*/
+	function showProgram($siteVisit_id, $table, $keyFld, $fieldsArr, $sizeOfFld=10, $report=0, $tableHeading=""){
+		$conn = $this->getDatabaseConnection();
+		$count=0;
+		$message = "";
+		$content = "";
+		if ($report) {
+			$content .=  $this->makeTop($this->dbTableInfoArray["Institutions_application"]->dbTableCurrentID);
+		}
+		$content .=  "<table width='95%' cellpadding='2' cellspacing='2' align='center' border='1'>";
+		$content .=  "<tr>";
+		if (is_array($tableHeading) && (count($tableHeading) > 0)) {
+			foreach ($tableHeading AS $key=>$value) {
+				$content .= '<td valign="top" class="oncolourb" colspan="'.$value.'" align="center"><b>'.$key.'</b></td>';
+			}
+			$content .=  "</tr><tr>";
+		}
+		foreach ($fieldsArr AS $value) {
+			$content .=  '<td valign="top" class="oncolourb">'.$value.'</td>';
+			$count++;
+		}
+		$content .=  "<td valign='top'>&nbsp;</td></tr>";
+		$array_keys = array_keys($fieldsArr);
+		$SQL = "SELECT * FROM `".$table."` WHERE siteVisit_ref=".$siteVisit_id;
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $siteVisit_id);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($this->getDatabaseConnection(), $SQL);
+		$message = "Click on the 'Add' link in the rightmost column of this table in order to add a row for scheduling the site visit. <i>Note that you can have more than one row in which to plan activities of the site visit.</i>";
+
+		while ($row = mysqli_fetch_assoc($rs)){
+			$content .=  "<tr>";
+			foreach ($row AS $key=>$value) {
+				if (($value == '1000-01-01') || ($value == '00:00:00')) $value = '';
+				if (stristr($key, "time") > "") {
+					$content .=  '<td valign="top"><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:showTime(\'GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\', \''.$value.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_time.gif" border=0></a></td>';
+				}else if (stristr($key, "date") > "") {
+					$content .=  '<td valign="top"><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:show_calendar(\'defaultFrm.GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_calendar.gif" border=0></a></td>';
+				}else if (stristr($key, "text") > "") {
+					$content .=  "<td valign='top'><textarea size='".$sizeOfFld."' ID='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' name='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."'>".$value."</textarea></td>";
+				}else {
+					if (in_array($key, $array_keys)) {
+						$content .=  "<td valign='top'><input size='".$sizeOfFld."' type='TEXT' ID='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' name='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' value='".$value."'></td>";
+					}
+				}
+			}
+			if (!$report) $content .=  "<td valign='top' align='left'><a href='javascript:changeID(\"".$row[$keyFld]."\");changeCMD(\"del\");moveto(\"stay\")'>Del</a></td>";
+			$content .=  "</tr>";
+		}
+		if (!$report) {
+			$content .=  "<tr>";
+			$content .=  "<td valign='top' colspan='".($count)."'>".$message."</td><td align='left'><a href='javascript:changeCMD(\"new\");moveto(\"stay\")'>Add</a></td>";
+			$content .=  "</tr>";
+		}
+		$content .= '<tr><td><input type="HIDDEN" ID="GRID_save_'.$row[$keyFld].'" name="GRID_save_'.$row[$keyFld].'" value="1"></td></tr>';
+		$content .=  "</table>";
+		if (!$report) {
+			$content .=  "<input type='hidden' ID='cmd' name='cmd' value=''>";
+			$content .=  "<input type='hidden' ID='id' name='id' value=''>";
+		}
+		
+		return $content;
+	}
+
+	/*
+	Louwtjie
+	2004-03-31
+	To return the dates for the sitevisit in the e-mail to institution but to print it also in the html pages.
+	*/
+	function getDatesForSiteVisit ($print="") {
+		$SQL = "SELECT date_visit1, date_visit2, final_date_visit FROM siteVisit WHERE siteVisit_id=".$this->dbTableInfoArray[$this->dbTableCurrent]->dbTableCurrentID;
+		$conn = $this->getDatabaseConnection();
+//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $this->dbTableInfoArray[$this->dbTableCurrent]->dbTableCurrentID);
+		//$sm->execute();
+		//$RS = $sm->get_result();
+		
+		$RS = mysqli_query($conn, $SQL);
+		$SEL = " CHECKED";
+		if ($row = mysqli_fetch_array($RS)) {
+			if ($print > "") {
+				echo '<td colspan="2" align="center">';
+				$date1 = '<input type="radio" name="FLD_final_date_visit" id="date1" value="'.$row["date_visit1"].'"';
+				if ($row["final_date_visit"] == $row["date_visit1"]) {
+					$date1 .= $SEL;
+				}
+				echo $date1.'>&nbsp;'.$row["date_visit1"];
+				echo '<Br>';
+				$date2 = '<input type="radio" name="FLD_final_date_visit" id="date2" value="'.$row["date_visit2"].'"';
+				if ($row["final_date_visit"] == $row["date_visit2"]) {
+					$date2 .= $SEL;
+				}
+				echo $date2.'>&nbsp;'.$row["date_visit2"].'</td>';
+			}else {
+				return $row["date_visit1"]."|".$row["date_visit2"];
+			}
+		}
+		
+	}
+
+	/**
+	* Function to create the academic sturcture table of the institutional profile
+	* @author Louwtjie du Toit
+	* @return mixed $content
+	*/
+	function createAcaStruct($tableKeyFld, $tableKeyVal, $table, $keyFld, $fieldsArr, $sizeOfFld=10, $report=0, $tableHeading=""){
+		$count=0;
+		$message = "";
+		$content = "";
+		$content .=  "<table width='90%' cellpadding='2' cellspacing='2' align='center' border='0'>";
+		$content .=  "<tr>";
+		if (is_array($tableHeading) && (count($tableHeading) > 0)) {
+			foreach ($tableHeading AS $key=>$value) {
+				$content .= '<td class="oncolourb" colspan="'.$value.'" align="center"><b>'.$key.'</b></td>';
+			}
+			$content .=  "<td>&nbsp;</td></tr><tr>";
+		}
+		foreach ($fieldsArr AS $value) {
+			$content .=  '<td class="oncolour" align="center"><b>'.$value.'</b></td>';
+			$count++;
+		}
+		$content .=  "<td>&nbsp;</td></tr>";
+		$array_keys = array_keys($fieldsArr);
+		$SQL = "SELECT * FROM `".$table."` WHERE ".$tableKeyFld."='".$tableKeyVal."'";
+		$conn = $this->getDatabaseConnection();
+		//$sm = $conn->prepare($SQL);
+		//$sm->bind_param("s", $tableKeyVal);
+		//$sm->execute();
+		//$rs = $sm->get_result();
+		
+		$rs = mysqli_query($conn, $SQL);
+		if (!mysqli_num_rows($rs)) {
+			$message = "To start filling in the table, click on the 'Insert' link on the right of the table";
+		}
+
+		while ($row = mysqli_fetch_assoc($rs)){
+			$content .=  "<tr>";
+			foreach ($row AS $key=>$value) {
+				if (stristr($key, "time") > "") {
+					$content .=  '<td><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:showTime(\'GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\', \''.$value.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_time.gif" border=0></a></td>';
+				}else if (stristr($key, "date") > "") {
+					$content .=  '<td><input readonly size="'.$sizeOfFld.'" type="TEXT" ID="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" name="GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'" value="'.$value.'"><a href="javascript:show_calendar(\'defaultFrm.GRID_'.$row[$keyFld].'$'.$keyFld.'$'.$key.'$'.$table.'\');">';
+					if (!$report) $content .=  '<img src="images/icon_calendar.gif" border=0></a></td>';
+				}else {
+					if (in_array($key, $array_keys)) {
+						$content .=  "<td><input size='".$sizeOfFld."' type='TEXT' ID='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' name='GRID_".$row[$keyFld]."$".$keyFld."$".$key."$".$table."' value='".$value."'></td>";
+					}
+				}
+			}
+			if (!$report) $content .=  "<td align='left'><a href='javascript:changeID(\"".$row[$keyFld]."\");changeCMD(\"del\");moveto(\"stay\")'>Del</a></td>";
+			$content .= '<tr><td><input type="HIDDEN" name="GRID_save_'.$row[$keyFld].'" value="1"></td></tr>';
+			$content .=  "</tr>";
+		}
+		if (!$report) {
+			$content .=  "<tr>";
+			$content .=  "<td colspan='".($count)."'>".$message."</td><td align='left'><a href='javascript:changeCMD(\"new\");moveto(\"stay\")'>Insert</a></td>";
+			$content .=  "</tr>";
+		}
+		$content .=  "</table>";
+		
+		return $content;
+	}
+
+	// 2007-08-05 Robin
+	// Return an array of all evaluators attached to an application.

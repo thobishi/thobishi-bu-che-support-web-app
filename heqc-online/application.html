@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type='text/javascript'>
+function SetWindow() {
+	var exactHeight = screen.height;
+	var exactWidth = screen.width;
+	var height = screen.availHeight-10;
+	var width = screen.availWidth-10;
+	var top = 0;
+	var left = 0;
+	
+	if ((exactHeight > 768) || (exactWidth > 1024)) {
+		height = 758;
+		width = 1014;
+	}
+	
+	newwin=window.open("application.php", "", "fullscreen=no,toolbar=no,status=no,menubar=no,scrollbars=yes,resizable=no,directories=no,location=no,width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+	self.parent.opener = self;
+	self.parent.close();
+}
+</script>
+</head>
+
+<body onload="SetWindow();">
+</body>
+</html>

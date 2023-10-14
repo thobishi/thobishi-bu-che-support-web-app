@@ -1,0 +1,40 @@
+<?php
+
+	function system_escape ($str) {
+		if (!get_magic_quotes_gpc()) {
+			if (is_array($str)) {
+				array_walk($str, 'system_reslash_multi');
+			} else {
+				$str = system_reslash ($str);
+			}
+		}
+		return ($str);
+	}
+	
+	function system_reslash_multi (&$val,$key)
+	{
+		if (is_array($val)) {
+			array_walk($val,'system_reslash_multi',$new);
+		} else {
+			$val = system_reslash($val);
+		}
+	}
+
+	
+	function system_reslash ($string)
+	{
+		if (!get_magic_quotes_gpc()) {
+			$string = mysqli_real_escape_string($string);
+		}
+		return $string;
+	}
+
+	function system_addslashes ($string)
+	{
+		if (!get_magic_quotes_gpc()) {
+			$string = addslashes ($string);
+		}
+		return $string;
+	}
+
+?>

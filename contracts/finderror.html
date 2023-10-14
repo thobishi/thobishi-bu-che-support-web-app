@@ -1,0 +1,211 @@
+
+<html>
+<head>
+<title>Contract Register</title>
+<link rel=STYLESHEET TYPE="text/css" href="styles.css" title="Normal Style">
+<SCRIPT SRC="js/che.js" type="text/javascript"></SCRIPT>
+<META HTTP-EQUIV='EXPIRES' CONTENT='0'>
+		<META http-equiv=Pragma content=no-cache>
+		<META http-equiv=Cache-Control content=no-cache> </head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script type="text/javascript">
+menunum=0;
+menus=new Array();
+_d=document;
+
+function addmenu(){
+	menunum++;
+	menus[menunum]=menu;
+}
+
+function dumpmenus(){
+	mt="<script type=text\/javascript>";
+		for(a=1; a < menus.length; a++){
+			mt+=" menu"+a+"=menus["+a+"];";
+		}
+	mt+="<\/script>";
+	_d.write(mt);
+}
+
+effect = "Fade(duration=0.2);Alpha(style=0,opacity=100);Shadow(color='000000', Direction=125, Strength=1)";
+
+timegap=300;		// The time delay for menus to remain visible
+followspeed=5;		// Follow Scrolling speed
+followrate=40;		// Follow Scrolling Rate
+suboffset_top=4;	// Sub menu offset Top position
+suboffset_left=6;	// Sub menu offset Left position
+closeOnClick = true;
+
+style1=[			// style1 is an array of properties. You can have as many property arrays as you need. This means that menus can have their own style.
+"000000",			// Mouse Off Font Color
+"fda716",			// Mouse Off Background Color
+"000000",			// Mouse On Font Co"picture galleries","http://",,,0lor
+"f76905",			// Mouse On Background Color
+"",					// Menu Border Color
+11,					// Font Size in pixels
+"normal",			// Font Style (italic or normal)
+"bold",				// Font Weight (bold or normal)
+"Verdana, Helvetica, sans-serif;",	// Font Name
+1,					// Menu Item Padding
+"",					// Sub Menu Image (Leave this blank if not needed)
+,					// 3D Border & Separator bar
+"66ffff",			// 3D High Color
+"336699",			// 3D Low Color
+"",					// Current Page Item Font Color (leave this blank to disable)
+"",					// Current Page Item Background Color (leave this blank to disable)
+"",					// Top Bar image (Leave this blank to disable)
+"",					// Menu Header Font Color (Leave blank if headers are not needed)
+"",					// Menu Header Background Color (Leave blank if headers are not needed)
+"000000",			// Menu Item Separator Color
+];
+
+addmenu(menu=['mainmenu',87,0,70,,'left',style1,1,'center',,,1,,,,,,,,,,,'Home', 'javascript:goto(2);', '#',,1,'Edit', 'show-menu=-1', '#',,1,'Admin', 'show-menu=-2', '#',,1,'Reports', 'show-menu=-3', 'javascript:goto(-3);',,1,'Log out', 'javascript:goto(1);', '#',,1]);
+addmenu(menu=['-1', , , 130, 1, , style1, , 'left', effect,,,,,,,,,,,,,'Consultant / Service Provider details', 'javascript:goto(11);', '#',,1,'List of contracts', 'javascript:goto(46);', '#',,1,'Performance/progress of contracts', 'javascript:goto(41);', '#',,1]);
+addmenu(menu=['-2', , , 130, 1, , style1, , 'left', effect,,,,,,,,,,,,,'Maintain document type', 'javascript:goto(36);', '#',,1,'Manage users', 'javascript:goto(21);', '#',,1,'Manage security groups', 'javascript:goto(22);', '#',,1,'Send reminders', 'javascript:goto(42);', '#',,1,'Expire contracts', 'javascript:goto(44);', '#',,1]);
+addmenu(menu=['-3', , , 130, 1, , style1, , 'left', effect,,,,,,,,,,,,,'Contracts expiring', 'javascript:goto(31);', '#',,1,'Review consultants', 'javascript:goto(32);', '#',,1,'Review expenditure', 'javascript:goto(33);', '#',,1,'Downloadable Reports', 'javascript:goto(35);', '#',,1,'List of Ratings and Comments', 'javascript:goto(43);', '#',,1]);
+ menu1=menus[1]; menu2=menus[2]; menu3=menus[3]; menu4=menus[4];</script>
+<script type="text/javascript" src="menu/damenu.js"></script>
+<FORM NAME="defaultFrm" ID="defaultFrm" ACTION="?" METHOD="POST" onSubmit="javascript:alert('Hi');" TARGET="">
+<INPUT TYPE=HIDDEN NAME="VIEW" ID="VIEW" VALUE="0">
+<INPUT TYPE=HIDDEN NAME="MOVETO" ID="MOVETO" VALUE="">
+<INPUT TYPE=HIDDEN NAME="GOTO" ID="GOTO" VALUE="">
+<INPUT TYPE=HIDDEN NAME="CHANGE_TO_RECORD" ID="CHANGE_TO_RECORD" VALUE="">
+<INPUT TYPE=HIDDEN NAME="PROCESS_TO_USER" ID="PROCESS_TO_USER" VALUE="">
+<INPUT TYPE=HIDDEN NAME="VALIDATION" ID="VALIDATION" VALUE="">
+<INPUT TYPE=HIDDEN NAME="PREV_WORKFLOW" ID="PREV_WORKFLOW" VALUE="22|967">
+<INPUT TYPE=HIDDEN NAME="LAST_WORKFLOW_ID" ID="LAST_WORKFLOW_ID" VALUE="967">
+<INPUT TYPE=HIDDEN NAME="FLOW_ID" ID="FLOW_ID" VALUE="968">
+<INPUT TYPE=HIDDEN NAME="TMPL_NAME" ID="TMPL_NAME" VALUE="manageUsersForm1">
+<INPUT TYPE=HIDDEN NAME="WORKFLOW_SETTINGS" ID="WORKFLOW_SETTINGS" VALUE="PREV_WORKFLOW=22%7C967&ACTPROC=1473&CURRENT_TABLE=sec_Groups&DBINF____=NEW&DBINF_sec_Groups___sec_group_id=NEW">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+  <td valign="top">
+<script type="text/javascript">
+function selectAll() {
+
+	sLength = document.defaultFrm.elements['members[]'].length;
+	for (i=0; i<sLength; i++) {
+		document.defaultFrm.elements['members[]'].options[i].selected = true;
+	}
+
+	return true;
+}
+
+function addMembers(obj,obj2) {
+	sLen = obj.length;
+	for ( i=0; i<sLen; i++){
+		if (obj.options[i].selected == true ) {
+			obj2Len = obj2.length;
+			obj2.options[obj2Len]= new Option(obj.options[i].text, obj.options[i].value);
+		}
+	}
+	for ( i=(sLen-1); i>=0; i--) {
+		if (obj.options[i].selected == true ) {
+			obj.options[i] = null;
+		}
+	}
+}
+function removeMembers(obj,obj2) {
+	sLen = obj2.length;
+	for ( i=0; i<sLen ; i++){
+		if (obj2.options[i].selected == true ) {
+			objLen = obj.length;
+			obj.options[objLen]= new Option(obj2.options[i].text, obj2.options[i].value);
+		}
+	}
+	for ( i = (sLen -1); i>=0; i--){
+		if (obj2.options[i].selected == true ) {
+			obj2.options[i] = null;
+		}
+	}
+}
+</script>
+<br>
+<input type='hidden' name='groupID' value="1">
+<table border="0" cellpadding="2" cellspacing="2" align="center" width="95%">
+	<tr>
+		<td colspan="2">
+			<span class="loud">Manage Security Groups > Administrator</span>
+			<hr>
+		</td>
+	</tr>
+	<tr>
+	<td valign="top" width="20%" class="oncolourcolumnheader">Group name:</td>
+<td class='oncolourcolumn'><input type='text' value='Administrator' name='groupName'</td>	</tr>
+	<tr>
+		<td valign="top" class="oncolourcolumnheader">Group members:</td>
+		<td class="oncolourcolumn">
+			<table border="0">
+			<tr>
+				<td>
+					<strong>Selected</strong><br>
+					<select name="members[]" multiple size="10">
+							<option value="1">Octoplus Admin</option>
+							<option value="12">Francis Faller</option>
+					</select>
+				</td>
+				<td>
+					<input onclick="javascript:removeMembers(document.defaultFrm.elements['Allmembers'],document.defaultFrm.elements['members[]']);" type="Button" value=">>"><br>
+					<input onclick="javascript:addMembers(document.defaultFrm.elements['Allmembers'],document.defaultFrm.elements['members[]']);" type="Button" value="<<">
+				</td>
+				<td>
+					<strong>Available<br></strong>
+					<select name="Allmembers" multiple size="10">
+							<option value="15">Cheryl de la Rey</option>
+							<option value="9">Christa Smit</option>
+							<option value="8">Jan Beukes</option>
+							<option value="11">Lis Lange</option>
+							<option value="13">Lumkile Lalendle</option>
+							<option value="10">Rinda Smit</option>
+							<option value="22">S Badat</option>
+							<option value="14">Theo Bhengu</option>
+					</select>
+
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class='oncolourcolumnheader'>Group processes:</td>
+		<td class='oncolourcolumn'>
+<b>Admin</b><br>&nbsp;&nbsp;&nbsp;Admin - Expire contracts<br>&nbsp;&nbsp;&nbsp;Admin - Maintain document type<br>&nbsp;&nbsp;&nbsp;Admin - Manage Security Groups<br>&nbsp;&nbsp;&nbsp;Admin - Manage Users<br>&nbsp;&nbsp;&nbsp;Admin - Reminders<br><b>Edit</b><br>&nbsp;&nbsp;&nbsp;Edit - Consultant Details<br>&nbsp;&nbsp;&nbsp;List of contracts<br>&nbsp;&nbsp;&nbsp;Performance/progress of contracts<br><b>Reports</b><br>&nbsp;&nbsp;&nbsp;Reports - Contracts Expiring<br>&nbsp;&nbsp;&nbsp;Reports - Downloadable Reports<br>&nbsp;&nbsp;&nbsp;Reports - List of Ratings and Comments<br>&nbsp;&nbsp;&nbsp;Reports - Review Consultants<br>&nbsp;&nbsp;&nbsp;Reports - Review Expenditure<br>		</td>
+	</tr>
+</table>
+  <td valign=top align="left" width="1" class="divider">
+  <img src="images/blank.gif" width="1" height="1" alt="">
+  </td>
+  <td width="200" valign="top">
+    <table width="100%" border=0 align="center" cellpadding="2" cellspacing="2">
+	  <tr>
+	    <td class="actions" align="center">Actions</td>
+	  </tr>
+	</table>
+    <table width="100%" border=0 align="center" cellpadding="2" cellspacing="2">
+	<tr>
+			<td>
+				<table width="95%" border=0 align="center" cellpadding="2" cellspacing="2">
+				<tr><td height=22 width="28" valign="top"><div id="action__Img" style="display:Block"><img src='images/blank_action.gif' alt='' border=0></div></td><td height=22 valign="top"><div id="action_" style="display:Block"><a CLASS='panel' href=""></a></div></td></tr>
+<tr><td height=22 width="28" valign="top"><div id="action_next_Img" style="display:Block"><a title='' target='' CLASS='panel' href="javascript:moveto('next');"><img src='images/ico_next.gif' alt='' border=0></a></div></td><td height=22 valign="top"><div id="action_next" style="display:Block"><a title='' target='' CLASS='panel'  href="javascript:moveto('next');">Save</a></div></td></tr>
+<tr><td height=22 width="28" valign="top"><div id="action_cancel_Img" style="display:Block"><a title='' target='' CLASS='panel' href="javascript:exitView(0)"><img src='images/ico_cancel.gif' alt='' border=0></a></div></td><td height=22 valign="top"><div id="action_cancel" style="display:Block"><a title=''  target='' CLASS='panel' href="javascript:exitView(0)">Cancel</a></div></td></tr>
+				</table>
+			</td>
+
+	</tr>
+	</table>
+  </td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+<tr>
+  <td class="divider" height="1"></td>
+</tr>
+</table>
+<input type="submit">
+</form>
+
+<table width="100%" border=0 class="footer"><tr><td>&nbsp;</td></tr></table>
+
+
+</body>
+</html>

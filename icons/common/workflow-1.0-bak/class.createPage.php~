@@ -1,0 +1,286 @@
+<?php
+
+class createPage extends security {
+	var $htmlStart, $htmlEnd, $title, $styleSheet, $scriptHead, $scriptTail, $scriptTailInt;
+	var $bodyStart, $bodyMenu, $bodyHeader, $body, $bodyFooter;
+	var $NavigationBar, $template, $scriptFile;
+	var $bodyMenuNavigation;
+	var $view;
+
+	function createPage () {
+		$this->security ();
+		$this->initTags ();
+	}
+
+	function initTags() {
+		$this->htmlStart = "<html>\n";
+		$this->title					= "";
+		$this->styleSheet			= "";
+		$this->scriptFile			= array();
+		$this->scriptHead			= "";
+		$this->bodyStart = "<body>";
+		$this->NavigationBar 	= "";
+		$this->bodyMenu				= "";
+		$this->bodyMenuNavigation		= "";
+		$this->bodyHeader			= "";
+		$this->body						= "";
+		//do we view the page in view mode or normal. Default is normal.
+		$this->view 					= 0;
+		$this->bodyFooter			= "";
+		$this->scriptTail			= "";
+		$this->scriptTailInt	= "";
+		$this->htmlEnd = "</html>\n";
+	}
+
+	function readTemplate() {
+		$this->verifySecurity ();
+		if ( isset($this->template) ) {
+			if ($this->template > "") {
+				$tmplName = $this->relativePath."templates/".$this->template.".template.php";
+				if (file_exists($tmplName)) {
+					include ($tmplName);
+				}
+				$this->readTemplateSettingsFromDB ();
+			}
+		}
+	}
+
+	function readTemplateSettingsFromDB() {
+//		$template_id = 0;
+		//changed to get info from work_flows in sted of twmplate info table
+		$SQL = "SELECT * FROM `work_flows` WHERE template='".$this->template."'";
+		$RS = mysqli_query($SQL);
+		if ($row = mysqli_fetch_assoc($RS)) {
+			$this->setFormDBinfo($row["template_dbTableName"], $row["template_dbTableKeyField"]);
+//			$template_id = $row["template_info_id"];
+		}
+
+		/*
+		Create actions from database
+		*/
+		$SQL = "SELECT * FROM `template_action` WHERE template_name='".$this->template."' ORDER BY sec_no";
+		$RS = mysqli_query($SQL);
+		$action_obj = array();
+		while ($row = mysqli_fetch_array($RS)) {
+			array_push($action_obj, array ($row["template_action_name"], $row["template_action_desc"], $row["template_action_type"], $row["template_action_dest"], $row["template_action_img"], $row["template_action_imgAlt"], $row["template_action_target"], $row["template_action_title"], $row["sec_no"]));
+		}
+
+		/*
+		if there is no previous action, create a blank action so that the spacing of the actions stays the same.
+		Previous should always be on top.
+		*/
+		$is_prev = false;
+		$is_next = false;
+		foreach ($action_obj AS $action) {
+			if (in_array("previous", $action) || in_array("prev", $action)) {
+				$is_prev = true;
+			}
+			if (in_array("next", $action)) {
+				$is_next = true;
+			}
+		}
+
+		if (!$is_prev) {
+			array_unshift($action_obj, array("", "", "blank", "", "blank_action.gif", "", "", "", ""));
+		}
+
+		if (!$is_next) {
+			$this->array_insert_item ($action_obj, array("", "", "blank", "", "blank_action.gif", "", "", "", ""), 1);
+		}
+
+		//create a action for every action found in the database with the current template name
+		foreach ($action_obj as $action) {
+			$this->createAction ($action[0], $action[1], $action[2], $action[3], $action[4], $action[5], $action[6], $action[7]);
+		}
+
+		//start reading the template info from the database. This will be overwritten by the template files.
+		$SQL = "SELECT * FROM `template_field` WHERE template_name='".$this->template."'";
+		$RS = mysqli_query($SQL);
+		while ($row = mysqli_fetch_array($RS)) {
+			switch ($row["fieldType"]) {
+				case "SELECT":
+				case "RADIO":
+				case "RADIO:VERTICAL":
+					if ($row["fieldDBconnected"]) {
+						$this->createFieldFromDB($row["fieldName"],$row["fieldType"], $row["fieldSelectTable"], $row["fieldSelectID"], $row["fieldSelectName"],1,$row["fieldSelectWhere"]);
+					}else{
+						$this->createInputFromDB($row["fieldName"],$row["fieldType"], $row["fieldSelectTable"], $row["fieldSelectID"], $row["fieldSelectName"],1,$row["fieldSelectWhere"]);
+					}
+					break;
+				case "ENUM":
+				case "TEXT":
+				case "PASSWORD":
+				case "PASSWORD_ADMIN":
+				case "FILE":
+				case "CHECKBOX":
+				case "HIDDEN":
+				case "TEXTAREA":
+				case "DATE":
+					if ($row["fieldDBconnected"]) {
+						$this->createField($row["fieldName"], $row["fieldType"]);
+					}else{
+						$this->createInput($row["fieldName"], $row["fieldType"]);
+					}
+					break;
+				case "MULTIPLE":
+					$this->createMultipleRelation ($row["fieldName"], $row["fieldMainTable"], $row["fieldMainFld"], $this->dbTableInfoArray[$this->dbTableCurrent]->dbTableCurrentID, $row["fieldRelationFld"], $row["fieldRelationTable"], $row["fieldRelationKey"], $row["fieldRelationVal"]);
+					break;
+			}
+			$this->formFields[$row["fieldName"]]->fieldStyle = $row["fieldStyle"];
+			$this->formFields[$row["fieldName"]]->fieldOnClick = $row["fieldOnClick"];
+			$this->formFields[$row["fieldName"]]->fieldClass = $row["fieldClass"];
+			$this->formFields[$row["fieldName"]]->fieldSize = $row["fieldSize"];
+			$this->formFields[$row["fieldName"]]->fieldMaxFieldSize = $row["fieldMaxFieldSize"];
+			$this->formFields[$row["fieldName"]]->fieldCols = $row["fieldCols"];
+			$this->formFields[$row["fieldName"]]->fieldRows = $row["fieldRows"];
+			$this->formFields[$row["fieldName"]]->fieldOnChange = $row["fieldOnChange"];
+			$this->formFields[$row["fieldName"]]->fieldStatus = $row["fieldStatus"];
+			$this->formFields[$row["fieldName"]]->fieldDBconnected = $row["fieldDBconnected"];
+			$this->formFields[$row["fieldName"]]->fieldNullValue = $row["fieldNullValue"];
+			/* fieldOptions should not be set from here. It should be set from the
+			   createField() function.
+			*/
+//			$this->formFields[$row["fieldName"]]->fieldOptions = $row["fieldOptions"];
+			/* fieldValuesArray should not be read from this DB. it should be selected from a lookup
+			   table in the db.
+			*/
+//			$this->formFields[$row["fieldName"]]->fieldValuesArray = explode("|", ($row["fieldValuesArray"]));
+		}
+	}
+
+	function createStyleSheet () {
+		if ($this->styleSheet > "") {
+			echo '<link rel=STYLESHEET TYPE="text/css" href="'.$this->styleSheet.'" title="Normal Style">'."\n";
+		}
+	}
+
+	function createScriptFiles () {
+		foreach($this->scriptFile as $f) {
+			echo '<SCRIPT SRC="'.$f.'"></SCRIPT>'."\n";
+		}
+	}
+
+	function createScript ($str) {
+		if ($str > "") {
+			echo "<SCRIPT language=\"Javascript\">\n";
+			echo "<!-- \n";
+			echo $str;
+			echo " -->\n";
+			echo "</SCRIPT>\n";
+		}
+	}
+
+	function runInit ($file) {
+		if ($file > "") {
+			// if there is a proc_init file we will execute it.
+			$codePage = "proc/".$file.".init.php";
+			if (file_exists($codePage)) {
+				include ($codePage);
+			}
+		}
+	}
+
+	function createHTML($file) {
+		if ($file > "") {
+			// if there is a proc_pre file we will execute it.
+			$codePage = $this->relativePath."proc/".$file.".pre.php";
+			if (file_exists($codePage)) {
+				include ($codePage);
+			}
+			include ($this->relativePath."html/".$file.".html.php");
+		}
+	}
+
+	function showPage() {
+		$this->readTemplate ();
+		$this->formHidden["FLOW_ID"] = $this->workFlowID;
+		$this->formHidden["TMPL_NAME"] = $this->template;
+		$this->saveWorkFlowSettings ();
+
+		// $this->runInit ($this->body);
+
+		echo $this->htmlStart;
+		echo "<head>\n";
+		if ($this->title > "") echo "<title>".$this->title."</title>\n";
+		$this->createStyleSheet ();
+		$this->createScriptFiles ();
+		$this->createScript ($this->scriptHead);
+		echo "<META HTTP-EQUIV='EXPIRES' CONTENT='0'>
+		<META http-equiv=Pragma content=no-cache>
+		<META http-equiv=Cache-Control content=no-cache> ";
+		echo "</head>\n";
+		echo $this->bodyStart."\n";
+		$this->createHTML($this->bodyMenu);
+		if ($this->bodyMenuNavigation > "") include ("menu/".$this->bodyMenuNavigation.".php");
+		$this->createHTML($this->bodyHeader);
+		$this->createHTML($this->body);
+		$this->createHTML($this->bodyFooter);
+		$this->createScript ($this->scriptTail);
+		$this->createScript ($this->scriptTailInt);
+		echo "</body>\n";
+		echo $this->htmlEnd;
+	}
+
+	function popupWindow($link, $title, $html) {
+		if ($title == "") $title = $link;
+
+		$html = str_replace ("'", "\'", $html);
+
+		echo "<a href=\"javascript:popupWindow('$title', '$html');\">$link</a>";
+	}
+
+	function popupContent($title, $content, $template="", $new=false) {
+		if ($template == "") $template = $this->template;
+		if ($new == false) {
+			echo "<a href=\"javascript:winContentText('$title', '$template', '$content');\">$title</a>";
+		} else {
+			echo "<a href=\"javascript:winContentTextTMP('$title', '$template', '$content');\">$title</a>";
+		}
+	}
+
+	function support_popupWindow($width, $height, $top="") {
+		$this->scriptHead = $this->scriptHead."\n".
+
+			"function popupWindow(title, html) {\n".
+			"	w=$width;\n".
+			"	h=$height;\n".
+			"	closeScript = '<script>function doClose() { self.close(); }</script>';\n".
+			"	leftSide = (screen.width-w)-25;\n";
+
+		if ($top == "") {
+			$this->scriptHead = $this->scriptHead."	topSide = (screen.height-h)/2;\n";
+		} else {
+			$this->scriptHead = $this->scriptHead."	topSide = $top;\n";
+		}
+
+		$this->scriptHead = $this->scriptHead.
+			"	helpwin = open(\"\",\"\",\"width=\"+w+\",height=\"+h+\", top=\"+topSide+\", left=\"+leftSide+\", scrollbars=yes\");\n".
+			"	helpwin.document.write('<html><head>');\n".
+			"	helpwin.document.write('".'<link rel=STYLESHEET TYPE="text/css" href="'.$this->styleSheet.'" title="Normal Style">'."');\n".
+			"	helpwin.document.write('</head><title>'+title+'</title>');\n".
+			"	helpwin.document.write('<body  onblur=\"doClose();\" class=help>');\n".
+			"	helpwin.document.write('<table width=\"100%\" cellpadding=\"2\" cellspacing=\"0\" border=\"0\"><tr><td bgcolor=\"#CC3300\" height=\"2\"></td></tr><tr><td bgcolor=\"#ECF1F6\" align=\"center\"><img src=\"images/help_top.gif\" width=\"255\" height=\"45\"></td></tr></table><br>');\n".
+			"	helpwin.document.write(html);\n".
+			"	helpwin.document.write(closeScript);\n".
+			"	helpwin.document.write('</body></html>');\n".
+			"}\n";
+	}
+
+	function mis_eval_pre ($line, $file) {
+		$this->evalLine = $line;
+		$this->evalFile = $file;
+		ob_start();
+	}
+
+	function mis_eval_post ($eval_code) {
+		$output = ob_get_flush();
+		if (strpos(strtolower($output), "warning") || strpos(strtolower($output), "notice") || strpos(strtolower($output), "error")) {
+			$dbString = "WARNING WAS: \n".$output."\n\nEVALED CODE: \n".$eval_code."\n\n"."POST VARS: \n".var_export($_POST, TRUE)."\n\n"."ACTIVE PROCESS ID: ".$this->active_processes_id;
+			$this->writeLogInfo(10, "EVAL - ERROR in ".$this->evalFile." on LINE ".$this->evalLine, mysqli_escape_string($dbString), TRUE);
+		}
+	}
+
+
+}
+
+?>

@@ -1,0 +1,81 @@
+[submodule "plugins/assets"]
+	path = plugins/assets
+	url = git://github.com/dakota/CakePHP-Assets.git
+[submodule "plugins/debug_kit"]
+	path = plugins/debug_kit
+	url = git://github.com/cakephp/debug_kit.git
+[submodule "plugins/authsome"]
+	path = plugins/authsome
+	url = https://github.com/felixge/cakephp-authsome.git
+[submodule "plugins/templates"]
+	path = plugins/templates
+	url = git://github.com/CakeDC/templates.git
+[submodule "plugins/utils"]
+	path = plugins/utils
+	url = git://github.com/CakeDC/utils.git
+[submodule "plugins/clear_cache"]
+	path = plugins/clear_cache
+	url = git://github.com/ceeram/clear_cache.git
+[submodule "plugins/jquery"]
+	path = plugins/jquery
+	url = git@redmine:jquery.git
+[submodule "plugins/jquery_plugins"]
+	path = plugins/jquery_plugins
+	url = git@redmine:jquery-plugins.git
+[submodule "plugins/octo_jquery"]
+	path = plugins/octo_jquery
+	url = git@redmine:octo-jquery.git
+[submodule "plugins/octo_upload"]
+	path = plugins/octo_upload
+	url = git@redmine:octo-upload.git
+[submodule "plugins/octo_users"]
+	path = plugins/octo_users
+	url = git@redmine:octo-users.git
+[submodule "plugins/webservice"]
+	path = plugins/webservice
+	url = git://github.com/dakota/webservice_plugin.git
+[submodule "plugins/search"]
+	path = plugins/search
+	url = git://github.com/dakota/search.git
+[submodule "plugins/migrations"]
+	path = plugins/migrations
+	url = git://github.com/dakota/migrations.git
+[submodule "plugins/pagination_recall"]
+	path = plugins/pagination_recall
+	url = git://github.com/dakota/pagination_recall.git
+[submodule "plugins/custom_views"]
+	path = plugins/custom_views
+	url = git@redmine:custom-views.git
+[submodule "plugins/namespace_cache"]
+	path = plugins/namespace_cache
+	url = git@redmine:namespace-cache.git
+[submodule "plugins/wizard"]
+	path = plugins/wizard
+	url = git@redmine:cake-wizard.git
+[submodule "plugins/generic_js"]
+	path = plugins/generic_js
+	url = git@redmine:generic-js.git
+[submodule "vendors"]
+	path = vendors
+	url = git@redmine.octoplus.co.za:cake-vendors.git
+[submodule "plugins/asset_management"]
+	path = plugins/asset_management
+	url = git://github.com/dakota/CakePHP-Asset-Management-Plugin.git
+[submodule "plugins/octoplus"]
+	path = plugins/octoplus
+	url = git@redmine:octo-cake.git
+[submodule "plugins/octo_filter"]
+	path = plugins/octo_filter
+	url = git@redmine:octo-filter.git
+[submodule "plugins/google"]
+	path = plugins/google
+	url = git://github.com/dakota/cakephp_google_plugin.git
+[submodule "plugins/deploy"]
+	path = plugins/deploy
+	url = git@redmine:deploy.git
+[submodule "plugins/wk_html_to_pdf"]
+	path = plugins/wk_html_to_pdf
+	url = https://github.com/dakota/wk_html_to_pdf.git
+[submodule "plugins/octo_logs"]
+	path = plugins/octo_logs
+	url = git@redmine:octo-log.git

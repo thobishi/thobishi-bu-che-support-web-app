@@ -1,0 +1,11 @@
+*~
+*.bk
+*.bak
+*.swp
+*.not
+*.bk.php
+*.bak.php
+*.php.bk
+*.bk.html.php
+*.BACKUP
+Thumbs.db

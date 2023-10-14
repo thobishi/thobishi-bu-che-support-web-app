@@ -1,0 +1,164 @@
+#generalActions, #pageSections,
+header.system-header, div.pageHeader,
+ul.breadcrumb, div.form-actions{
+	display: none;
+}
+
+table.table-income td.tdLast{
+	display: none;
+}
+
+table.table-income input[disabled],
+table.multigrid input[disabled],
+table.multigrid input{
+	width: 60px;
+}
+
+table.multigrid td{
+	padding:0px;
+}
+
+/*
+	Fit each table on one page start
+*/
+div.cover_sheet{
+	width: auto;
+}
+div.programme_profile {
+	width: auto;
+	padding-bottom: 70px;
+}
+
+div.programme_head {
+	padding-bottom: 180px;
+	font-size: 12px;
+}
+
+div.contact_person {
+	width: auto;
+	padding-bottom: 500px;
+}
+
+div.site_delivery{
+	width: auto;
+	padding-bottom: 200px;
+}
+div.expenses,
+div.income{
+	padding-bottom: 100px;
+}
+
+div.numbers {
+    width: auto;
+	padding-bottom: 100px;
+}
+div.academic_demographic {
+	width:auto;
+	padding-bottom: 100px;
+}
+div.numbers  input[disabled],
+div.expenses  input[disabled],
+div.income  input[disabled],
+div.student_demographic  input[disabled],
+div.qualifications  input[disabled],
+div.academic_demographic input[disabled]{
+	width: 100px!important;
+}
+div.totalAmount  input[disabled]{
+	width: 130px!important;
+}
+div.race_demographic{
+	width:auto;
+	padding-bottom: 1600px;
+}
+
+div.totalAmount{
+	width: 900px;
+	padding-bottom: 700px;
+}
+
+textarea{
+	height: 100px;
+}
+
+/*
+	Fit each table on one page end
+*/
+
+.multiGridDiv input[disabled], 
+.multiGridDiv select [disabled]{
+	width: 60px;
+}
+
+div.qualifications {
+	/*width: 300px!important;
+	margin-left: -50px;*/
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	margin-left: 300px;
+	font-size: 8px;
+	height: 1400px!important;
+	overflow: visible!important;
+}
+
+div.qualifications input{
+	height: 15px;
+	font-size: 10px;
+	padding: 0;
+	width: 80px;
+}
+
+div.qualifications table.multigrid td{
+	height: 8px!important;
+}
+
+h3.academicTitle{
+	position:absolute;
+	z-index:999999;
+	margin-top: -650px;
+	
+}
+.student_demographicTitle{
+	position:absolute;
+	z-index:999999;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	margin-left: -100px;
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	
+}
+div.student_demographic{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	margin-left: 200px;
+	font-size: 12px!important;
+	height: 100%!important;
+	padding-left: 200px;
+}
+
+
+div.qualifications table th/*,
+div.student_demographic table th*/{
+	padding: 0px;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled], 
+input[readonly],
+select[readonly], 
+textarea[readonly] {
+	background-color: #ffffff !important;
+}
+
+/*table.table-bordered td,
+table.table-striped td{
+	background-color: #ffffff !important;
+}
+
+.table-striped tbody > tr:nth-child(2n+1) > td,
+.table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: #ffffff !important;
+}*/

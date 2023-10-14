@@ -1,0 +1,25 @@
+SchemaAnalyst plugin for CakePHP 1.3 - PUBLIC PREVIEW
+
+Analyses database tables and connections.
+
+Currently checking:
+ - Database table field lengths.
+ - Database table charset.
+ - Database connection charset.
+
+Next up:
+ - Publishing test cases.
+ - Checking primary index folowing Model::$primaryKey.
+ - Checking indexes following model associations.
+ - Checking unique indexes following isUnique validation rules.
+
+DBO engines supported:
+ - MySQL
+
+Limited, because most of CakePHP's DBOs do not have the DboSource::index() 
+method implemented. Not sure yet about the charsets, could be trouble too.
+
+Test cases have been kept back, because they are a mess right now, I will
+publish them when I have cleaned them up.
+
+And please, don't post any issues yet. This plugin is still in development.

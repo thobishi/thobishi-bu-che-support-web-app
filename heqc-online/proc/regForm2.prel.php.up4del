@@ -1,0 +1,27 @@
+<!-- <table width="75%" border=0 align="center" cellpadding="2" cellspacing="2"><tr><td>
+<br><br>
+<table border=0><tr>
+<td>
+<b>Thank you for registering with the HEQC Accreditation System. 
+<br><br>
+As soon as your login has been authorised you will be notified via e-mail.
+</b>
+</td>
+</tr></table>
+<br><br>
+</td></tr></table> -->
+<%
+/*	$userid = "";
+	$userid = $this->dbTableInfoArray["users"]->dbTableCurrentID;
+	if (isset($HTTP_POST_VARS["new_inst"]) && ($HTTP_POST_VARS["new_inst"] == "on")) {
+		$SQL = "UPDATE `users` SET `institution_ref` = 0 WHERE user_id = ".$userid;
+		$rs = mysqli_query($SQL);
+	}
+	
+	$message = "Dear ".$this->getValueFromTable("lkp_title", "lkp_title_id", $this->getValueFromTable("users", "user_id", $userid, "title_ref"), "lkp_title_desc")." ".$this->getValueFromTable("users", "user_id", $userid, "surname").", \n\nThank you for registering with the HEQC On-line Accreditation System. The authorization of your login should not take longer than two working days.\n\nShould you have any queries, please contact\n".$this->getValueFromTable("users", "user_id", $this->getDBsettingsValue("current_auth_user_id"), "name")." ".$this->getValueFromTable("users", "user_id", $this->getDBsettingsValue("current_auth_user_id"), "surname")."\nPhone: ".$this->getValueFromTable("users", "user_id", $this->getDBsettingsValue("current_auth_user_id"), "contact_nr")."\nE-mail: ".$this->getValueFromTable("users", "user_id", $this->getDBsettingsValue("current_auth_user_id"), "email")."\n\nSincerely, \nHEQC Accreditation Directorate.";
+	$this->misMail($userid, "Registration", $message);
+	$message = "Dear ".$this->getValueFromTable("users", "user_id", $this->getDBsettingsValue("current_auth_user_id"), "name").", \n\n There is a new registration to be authorized. \n ".$this->getDBsettingsValue("accreditataion_url")." \n\n Sincerely, \n HEQC Accreditation System.";
+	$this->misMail($this->getDBsettingsValue("current_auth_user_id"), "New User Registration Request", $message);
+
+	$this->changeActiveProcesses (3, $this->getDBsettingsValue("current_auth_user_id"));*/
+%>

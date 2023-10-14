@@ -1,0 +1,12 @@
+<?php
+
+	function simple_text2html ($string, $format=0) {
+		switch ($format) {
+			case "docgen": 	return ( str_replace("\n","<br />",$string) );
+							break;
+			default: return ( str_replace("\n","<br>",$string) );
+					break;
+		}
+	}
+
+?>

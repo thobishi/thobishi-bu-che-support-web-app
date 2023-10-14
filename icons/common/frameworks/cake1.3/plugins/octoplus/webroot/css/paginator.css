@@ -1,0 +1,48 @@
+div.paginator {
+	text-align: left;
+	margin-top: 8px;
+	clear: both;
+}
+
+div.limitor {
+	float: right;
+}
+
+div.limitor label, div.limitor select {
+	display: inline;
+}
+
+div.paginator span a,
+div.paginator a.prev,
+div.paginator a.next
+{
+	padding: 3px 5px;
+	border: 2px solid #eaeaea;
+	margin-right: 5px;
+	text-decoration: none;
+	color: #004800;
+}
+
+div.paginator span a:hover,
+div.paginator a.prev:hover,
+div.paginator a.next:hover
+{
+	border: 2px solid #004800;
+}
+
+div.paginator span.current {
+	padding: 3px 5px;
+	border: 2px solid #eaeaea;
+	margin-right: 5px;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #cc9900;
+}
+
+div.paginator span.disabled {
+	padding: 3px 5px;
+	border: 2px solid #eaeaea;
+	margin-right: 5px;
+	text-decoration: none;
+	color: #757575;
+}

@@ -1,0 +1,52 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Octoplus Uploader\n"
+"POT-Creation-Date: 2011-11-28 11:12+0200\n"
+"PO-Revision-Date: 2011-11-28 11:14+0200\n"
+"Last-Translator: Walther Lalk <walther@octoplus.co.za>\n"
+"Language-Team: Octoplus <systems@octoplus.co.za>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Poedit-Language: French\n"
+
+#: /models/attachment.php:31
+msgid "Please enter a Class"
+msgstr ""
+
+#: /models/attachment.php:33
+msgid "Please enter a Foreign Key"
+msgstr ""
+
+#: /models/attachment.php:52;56
+msgid "Invalid attachment"
+msgstr ""
+
+#: /views/elements/uploader.ctp:5
+msgid "File"
+msgstr ""
+
+#: /views/elements/uploader.ctp:6
+msgid "File description"
+msgstr "Description du fichier"
+
+#: /views/elements/uploader.ctp:29
+msgid "Remove file"
+msgstr ""
+
+#: /views/elements/uploader.ctp:32
+msgid "Existing file:"
+msgstr ""
+
+#: /views/elements/uploader.ctp:37
+msgid "You can upload a new file if you wish to replace the existing one"
+msgstr ""
+
+#: /views/elements/uploader.ctp:59
+msgid "Add another file"
+msgstr "Ajouter un autre fichier"
+

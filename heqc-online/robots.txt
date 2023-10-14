@@ -1,0 +1,4 @@
+# /robots.txt for heqc-online.che.ac.za
+User-agent: *
+Disallow: /
+

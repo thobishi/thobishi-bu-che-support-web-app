@@ -1,0 +1,4 @@
+<h3>Upload analyst report</h3>
+<?php
+	$this->makeLink("analyst_report_doc", "Upload analyst report");
+?>

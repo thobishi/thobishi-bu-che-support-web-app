@@ -1,0 +1,18 @@
+[submodule "plugins/utils"]
+	path = plugins/utils
+	url = git://github.com/CakeDC/utils.git
+[submodule "plugins/pagination_recall"]
+	path = plugins/pagination_recall
+	url = git://github.com/mcurry/pagination_recall.git
+[submodule "plugins/octo_users_dev"]
+	path = plugins/octo_users_dev
+	url = git@redmine:octo-users.git
+[submodule "plugins/jquery_ui/webroot/1.9"]
+	path = plugins/jquery_ui/webroot/1.9
+	url = git@github.com:dakota/jquery-ui.git
+[submodule "plugins/assets"]
+	path = plugins/assets
+	url = git://github.com/dakota/CakePHP-Asset-Management-Plugin.git
+[submodule "plugins/asset_manager"]
+	path = plugins/asset_manager
+	url = git://github.com/dakota/CakePHP-Asset-Management-Plugin.git

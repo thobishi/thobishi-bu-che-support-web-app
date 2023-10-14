@@ -1,0 +1,41 @@
+<h3>Process site visit - Manage reports</h3>
+<div class="row-fluid">
+<?php
+	$prog_id = $this->dbTableInfoArray["nr_programmes"]->dbTableCurrentID;
+	$this->displayProgrammeInfo();
+	$this->view = 1;
+	$url = "javascript:showSERreadOnly($prog_id);";
+	$screeningHistory = $this->getScreeningDetails('programme_ref', $prog_id);
+	$dbTableName = $this->dbTableInfoArray["nr_programmes"]->dbTableName;
+	$dbTableKeyField = $this->dbTableInfoArray["nr_programmes"]->dbTableKeyField;
+	
+	echo $this->element('header_information', compact('dbTableName', 'dbTableKeyField', 'prog_id', 'screeningHistory', 'url'));
+?>
+</div>
+
+<?php
+	$this->showField("active_user_ref");
+	$this->view = 0;
+?>
+
+<div class="hero-unit">
+	<h3>Preliminary analysis</h3>
+	<p>
+		The preliminary analyst must logon to the system to access the SER, the preliminary analysis template and to upload their completed report. The report will display below once the have uploaded it.
+		<ul>
+			<li>
+				The SER is accessible to the preliminary analyst for the access date period only.
+			</li>
+			<li>
+				You may extend the access period by clicking on previous and changing the start and end dates.
+			</li>
+			<li>
+				The preliminary analyst must upload the report on the system. You must follow up with the preliminary analyst if you do not see the report by the required deadline date. If, for some reason, the preliminary analyst cannot upload it, you may upload it on their behalf.
+			</li>
+		</ul>
+	</p>
+	<p>
+		<?php $this->makeLink("analyst_report_doc", "Submit report on behalf of analyst");
+		?>
+	</p>
+</div>

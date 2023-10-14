@@ -1,0 +1,105 @@
+<?php
+	$currentUserID = Settings::get('currentUserID');
+	// getRecommendationData LEFT JOIN nr_meeting_members ON nr_meetings.id = nr_meeting_members.nr_meeting_id
+	echo $this->element('filters/' . Settings::get('template'), $_POST);
+	$details = $this->getMeetingDetails("","", "","", "" ,$_POST, Settings::get('template'));
+
+		if(!empty($details)){
+?>
+		<div class="nr_progressDiv">
+
+<?php			
+				foreach($details as $info){
+						$meetingDate = isset($info['nr_meeting_start_date']) && isset($info['nr_meeting_end_date']) ? $info['nr_meeting_start_date']. " to " . $info['nr_meeting_end_date'] : '';
+						if(!empty($info['nrMeetingsProg'])){
+?>
+				<table class="table table-hover table-bordered table-striped nr_progress">
+				<thead>
+					<tr class="rg_tableTh">
+						<th class="rg_tableTh" colspan = "5">
+							<strong>Meeting date: </strong><?php echo $meetingDate;?>
+						</th>
+					</tr>
+					<tr class="rg_tableTh">
+						<th class="rg_tableTh" colspan = "5">
+							Meeting members: <?php echo  $info['nrMeetingsMem'];?>
+						</th>
+					</tr>	
+					<!--<tr class="rg_tableTh">
+						<th class="rg_tableTh" colspan = "5">
+							Meeting minutes: <?php //echo ($this->createDocLink($info['nrc_meeting_minutes_doc'], "Meeting minutes") > '' ? $this->createDocLink($info['nrc_meeting_minutes_doc'], "Meeting minutes") : "Not uploaded" ) ;?>
+						</th>
+					</tr>-->						
+					<tr>
+						<th rowspan="2">
+							Institution name
+						</th>
+						<th>
+							Recommendation report
+						</th>
+						<th rowspan="2">
+							Panel report
+						</th>						
+						<th rowspan="2">
+							SER Submission
+						</th>	
+						<th rowspan="2">
+							Criteria evaluation comparison
+						</th>
+						<th rowspan="2">
+							National Review Committee report
+						</th>						
+					</tr>
+				</thead>
+				<tbody>
+<?php						
+				
+					foreach($info['nrMeetingsProg'] as $prog){
+
+						$recommendationCompleted = $this->db->getValueFromTable("nr_programmes","id",$prog['id'],"recommendation_completed");
+						$siteVisit_completed = $this->db->getValueFromTable("nr_programmes","id",$prog['id'],"siteVisit_completed");
+						echo '<tr>';
+						echo '<td>' ;
+							echo  $prog['hei_name'] . ' ('.$prog['nr_national_review_id'].')' ;
+
+						echo '</td>';
+						
+						echo '<td>' ;
+							echo (!empty($prog['docsRelated']['recomendationReport']) && $recommendationCompleted == 1) ? $prog['docsRelated']['recomendationReport']  : 'Not uploaded';			
+						echo '</td>';
+						
+						echo '<td>' ;
+							echo (!empty($prog['docsRelated']['panelReport']) && $siteVisit_completed == 1) ? $prog['docsRelated']['panelReport']  : 'Not uploaded';					
+						echo '</td>';						
+						echo '<td>' ;
+							echo (!empty($prog['docsRelated']['serSubmission'])) ? $prog['docsRelated']['serSubmission'] : '';					
+						echo '</td>';						
+						echo '<td>' ;
+							echo (!empty($prog['docsRelated']['criteriaComparison'])) ? $prog['docsRelated']['criteriaComparison'] : 'Not uploaded';				
+						echo '</td>';
+						echo '<td>';
+							echo (!empty($prog['docsRelated']['heqc_NRC_report'])) ?  $prog['docsRelated']['heqc_NRC_report'] : 'Not uploaded';
+						echo '</td>' ;							
+						echo '</tr>';
+							}
+						}		
+				}
+?>
+				</tbody>
+			</table>
+		</div>
+<?php
+		}else{
+			echo 'No meetings scheduled';
+			// $this->pr($_POST['nr_meeting_start_date'] != 0 || $_POST['nr_meeting_start_date'] != 0);
+			if((isset($_POST['nr_meeting_start_date']) && $_POST['nr_meeting_start_date'] == 0) && (isset($_POST['hei_id']) && $_POST['hei_id'] == 0)){
+				echo '<script>';
+				echo "$('#generalActions').hide();";
+				echo '</script>';
+			}
+		}
+	// }else{
+		// echo "No results found";
+
+	// }
+?>

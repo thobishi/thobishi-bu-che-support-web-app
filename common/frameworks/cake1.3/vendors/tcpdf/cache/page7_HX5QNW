@@ -1,0 +1,461 @@
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+BT /F3 12.00 Tf ET
+q
+BT /F4 12.00 Tf ET
+q 184.25 0 0 841.89 0.00 0.00 cm /I1 Do Q
+Q
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+BT /F3 12.00 Tf ET
+BT /F3 12.00 Tf ET
+
+q
+1 0 0 1 118.600 0.000 cm
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 830.39 Td [(FormHelper::$namedArgs = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 107.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 815.39 Td [(FormHelper::$argSeparator = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 93.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 800.39 Td [(FormHelper::$validationErrors = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 133.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 785.39 Td [(FormHelper::$tags = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 770.39 Td [(FormHelper::$__tainted = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 755.39 Td [(FormHelper::$__cleaned = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 89.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 740.39 Td [(FormHelper::$Html = HtmlHelper object)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 158.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 725.39 Td [($html = HtmlHelper)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 133.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 710.39 Td [(HtmlHelper::$tags = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 122.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 695.39 Td [(HtmlHelper::$_crumbs = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 86.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 680.39 Td [(HtmlHelper::$__includedScripts = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 79.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 665.39 Td [(HtmlHelper::$_scriptBlockOptions = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 111.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 650.39 Td [(HtmlHelper::$__docTypes = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 125.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 635.39 Td [(HtmlHelper::$helpers = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 154.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 620.39 Td [(HtmlHelper::$base =)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 28.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 605.39 Td [("/var/www/html/common/frameworks/cake1.3/cake/console")] TJ ET Q
+
+Q
+
+q
+1 0 0 1 143.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 590.39 Td [(HtmlHelper::$webroot =)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 25.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 575.39 Td [("/var/www/html/common/frameworks/cake1.3/cake/console/")] TJ ET Q
+
+Q
+
+q
+1 0 0 1 111.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 560.39 Td [(HtmlHelper::$theme = "redesign")] TJ ET Q
+
+Q
+
+q
+1 0 0 1 154.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 545.39 Td [(HtmlHelper::$here =)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 3.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 530.39 Td [("/var/www/html/common/frameworks/cake1.3/cake/console//activi)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 165.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 515.39 Td [(ties/renderFile")] TJ ET Q
+
+Q
+
+q
+1 0 0 1 125.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 500.39 Td [(HtmlHelper::$params = array)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 100.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 485.39 Td [(HtmlHelper::$action = "renderFile")] TJ ET Q
+
+Q
+
+q
+1 0 0 1 129.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 470.39 Td [(HtmlHelper::$plugin = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 136.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 455.39 Td [(HtmlHelper::$data = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 440.39 Td [(HtmlHelper::$namedArgs = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 107.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 425.39 Td [(HtmlHelper::$argSeparator = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 93.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 410.39 Td [(HtmlHelper::$validationErrors = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 395.39 Td [(HtmlHelper::$__tainted = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 380.39 Td [(HtmlHelper::$__cleaned = NULL)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 169.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 365.39 Td [($isAjax = false)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 158.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 350.39 Td [($activity = array\()] TJ ET Q
+
+Q
+
+q
+1 0 0 1 147.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 335.39 Td [( "Activity" => array\()] TJ ET Q
+
+Q
+
+q
+1 0 0 1 176.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 320.39 Td [( "id" => "1",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 111.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 305.39 Td [( "gwis_number" => "GPL-00-001",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 158.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 290.39 Td [( "site_id" => "4",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 115.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 275.39 Td [( "deat_activity_number" => "",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 125.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 260.39 Td [( "activity_type_id" => "1",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 143.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 245.39 Td [( "name" => "Landfill",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 230.39 Td [( "contact_name" => "Walther",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 215.39 Td [( "contact_surname" => "Lalk",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 118.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 200.39 Td [( "contact_designation" => "",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 82.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 185.39 Td [( "contact_telephone" => "012 232 5454",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 104.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 170.39 Td [( "contact_fax" => "012 232 5545",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 93.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 155.39 Td [( "contact_mobile" => "082 343 9999",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 61.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 140.39 Td [( "contact_email" => "walther@octoplus.co.za",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 97.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 125.39 Td [( "postal_address_street" => "Here",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 93.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 110.39 Td [( "postal_address_suburb" => "there",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 82.600 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 95.39 Td [( "postal_address_city" => "everywhere",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 133.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 80.39 Td [( "postal_code" => "0223",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 115.000 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 65.39 Td [( "registration_status" => "0",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 129.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 50.39 Td [( "approval_status" => "1",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 129.400 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 35.39 Td [( "approval_comment" => "",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 104.200 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 20.39 Td [( "approval_date" => "2009-12-14",)] TJ ET Q
+
+Q
+
+q
+1 0 0 1 125.800 0.000 cm
+BT /F3 12.00 Tf ET
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+q 0.000 0.000 0.000 rg BT 122.00 5.39 Td [( "approval_user_id" => "1",)] TJ ET Q
+
+Q
+
+
+0.57 w 0 J 0 j [] 0 d 0 G 0 g
+BT /F3 12.00 Tf ET
+

@@ -1,0 +1,1940 @@
+<?php xml version="1.0" encoding="ISO-8859-1" ?>
+<DOC
+config_file="docgen/doc_config.inc"
+title="Project Detail Report"
+subject=""
+author="Project Register"
+manager=""
+company="Council on Higher Education"
+operator=""
+category="Project Detail"
+keywords="project detail report"
+comment=""
+>
+
+		<table border="l,r" width="100%">
+		<tr><td>
+			<img src="docgen/images/header.jpg" width="190" height="33" wrap="no" align="left" border="0" left="-2" top="-2" anchor="INCELL" />
+		</td></tr>
+		<tr>
+			<td>
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<p align="center"/><font size="24" color="#000000" align="center">Project Register</font>
+				<p align="center"/><br /><font size="26" color="#50719c" align="center"><b>Performance Indicators Report</b></font>
+				<p align="center"/><br /><br /><font size="16" color="#000000" align="center"><i>Generated on 23 September 2008</i></font>
+				<br /><br />
+				<p align="center"/><br /><br /><font size="20" color="#000000" align="center">Council on Higher Education</font>
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+			</td>
+		</tr>
+		<tr>
+			<td valign="bottom"><img src="../docgen/images/footer.jpg" width="190" height="5" wrap="no" border="0" left="-2" top="1" anchor="INCELL" /></td>
+		</tr>
+		</table>	<header><b>Project Register - Performance Indicators Report</b></header>
+	<footer><table border="0" align="center"><tr><td align="left">
+	<font size="10"><b>Council on Higher Education</b><tab /></font></td><td align="right"><cpagenum />/<tpagenum /><img src="docgen/images/footer.jpg" width="210" height="10" wrap="no" align="center" border="0" left="0" top="290" anchor="page" />
+	</td></tr></table></footer>					<p after="5" />
+					<table width="100%" border="t,b,l,r">
+						<tr bgcolor="5">
+							<td align="center"><b>Project Title</b></td>
+							<td align="center"><b>Budget year(s)</b></td>
+							<td align="center"><b>Project code</b></td>
+							<td align="center"><b>Planned budget</b></td>
+							<td align="center"><b>Revised budget</b></td>
+							<td align="center"><b>Expenditure</b></td>
+							<td align="center"><b>% Spent</b></td>
+						</tr>									<tr>
+										<td>Audit Operations  </td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">300</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 49655.10</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  DUT</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">303</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 8550.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  NMMU
+</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">307</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 153157.97</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  NWU</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">309</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 672.50</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  TUT</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">301</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 8550.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UFH</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">305</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 153513.55</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UFS</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">315</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UJ</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">311</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UKZN</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">308</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 53118.76</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UNISA</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">306</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 324024.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UP</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">302</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 11970.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  UWC</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">304</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  Venda</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">312</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  Wits</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">314</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  WSU</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">310</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Audit:  Zululand</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">313</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Manuals</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">351</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Research and Evaluation  </td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">352</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 11745.58</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>COORDINATION AND DELEGATION</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">203</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 797271.45</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>INSTITUTIONAL ACCREDITATION (PRIVATE PROVIDERS)</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">316</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>PRIVATE PROVIDER ACCREDITATION</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">201</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 935970.02</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>PUBLIC PROVIDER ACCREDITATION</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">202</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 30130.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Capacity Development Workshops</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">402</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 160967.19</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Database</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">404</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Discourses in Quality Assurance</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">401</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 35286.23</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Meeting Costs</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">119</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 394327.13</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Project Management</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">116</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 78792.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Student Participation in Quality Assurance</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">403</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 40539.63</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Technical assistance, experience exchange</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">131</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>B Ed, PGCE and ACE Review</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">227</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 703417.23</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>M Ed Review</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">226</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 53661.55</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>HEI Profiles</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">17</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 60000.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Knowledge Production</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">16</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>Meta Analysis of Audits</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">55</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 17735.56</td>
+										<td width="8%" align="center">0%</td>
+									</tr>									<tr>
+										<td>SHE-SA</td>
+										<td width="11%">2008/2009</td>
+										<td width="15%" align="right">15</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 0.00</td>
+										<td width="15%" align="right">R 20043.67</td>
+										<td width="8%" align="center">0%</td>
+									</tr>				</table>
+				<br /><section landscape="yes" />									
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit Operations  </b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audits Operations</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 49655.10</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  DUT</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  Durban University of Technology</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 8550.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  NMMU
+</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  Nelson Mandela Metropolitan University</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 153157.97</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  NWU</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  North-West University</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 672.50</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  TUT</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  Tshwane University of Technology     
+</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 8550.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UFH</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Fort Hare</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 153513.55</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UFS</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of the Free State</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UJ</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Johannesburg</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UKZN</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of KwaZulu-Natal</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 53118.76</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UNISA</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of South Africa</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 324024.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UP</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Pretoria</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 11970.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  UWC</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of the Western Cape</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  Venda</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Venda</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  Wits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Witwatersrand</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  WSU</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  Walter Sisulu University</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Audit:  Zululand</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Institutional Audit:  University of Zululand</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Manuals</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Manuals</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Institutional Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Research and Evaluation  </b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Research and Evaluation</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 11745.58</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Accreditation and Coordination</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>COORDINATION AND DELEGATION</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>COORDINATION OF QUALITY ASSURANCE WITH PROFESSIONAL COUNCILS AND OTHER QUALITY ASSURANCE BODIES AND DELEGATION OF PARTICULAR STIPULATED AREAS TO INSTITUTIONS</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 797271.45</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Accreditation and Coordination</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>INSTITUTIONAL ACCREDITATION (PRIVATE PROVIDERS)</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>ACCREDITATION OF PRIVATE HEIs AS PROVIDERS</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Accreditation and Coordination</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>PRIVATE PROVIDER ACCREDITATION</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>ACCREDITATION OF NEW PROGRAMMES OF PRIVATE HE INSTITUTIONS</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 935970.02</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Accreditation and Coordination</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>PUBLIC PROVIDER ACCREDITATION</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>ACCREDITATION OF NEW PROGRAMMES OF PUBLIC HE INSTITUTIONS</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 30130.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Capacity Development Workshops</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Capacity Development and Training Workshops</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 160967.19</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Database</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Database of Evaluators and Auditors</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Discourses in Quality Assurance</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Quality Forum, Conversations and Discourses</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 35286.23</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Meeting Costs</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Meeting Costs (Quality Systems Restructuring Project)</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 394327.13</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Project Management</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Project Management (Quality Systems Restructuring Project)</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 78792.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Student Participation in Quality Assurance</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Student Participation in Quality Assurance</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 40539.63</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Quality Promotion and Capacity Development</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Technical assistance, experience exchange</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Technical assistance, experience exchange (Quality Systems Restructuring Project)</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>National Reviews</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>B Ed, PGCE and ACE Review</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>National Review of Professional and Academic Programmes in Education: B Ed, PGCE and ACE Review</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 703417.23</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>National Reviews</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>M Ed Review</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>National Review of Professional and Academic Programmes in Education Programmes: M Ed Review</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 53661.55</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Monitoring and Evaluation</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>HEI Profiles</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>SA Knowledge Base and Institutional Profiles</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 60000.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Monitoring and Evaluation</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Knowledge Production</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Knowledge Production in South African universities</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Monitoring and Evaluation</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>Meta Analysis of Audits</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>Meta Analysis of Research Audit Reports</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 17735.56</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table>									<page />
+									<table width="145%" border="t,b,l,r" align="center">
+										<tr valign="top" align="left" bgcolor="5">
+											<td width="15%"><b>Directorate:</b></td><td><b>Monitoring and Evaluation</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title (Short):</b></td><td><b>SHE-SA</b></td>
+										</tr>
+										<tr valign="top" align="left" bgcolor="5">
+											<td><b>Project Title:</b></td><td><b>State of Higher Education in South Africa</b></td>
+										</tr>
+										<tr>
+											<td colspan="2">						<table border="0" width="140%">
+						<tr valign="top" align="left" bgcolor="5">
+							<td width="20%"><b>Budget year(s):</b></td><td>2008/2009</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Planned budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Revised budget:</b></td><td>R 0.00</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Expenditure:</b></td><td>R 20043.67</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td><b>Percent spent:</b></td><td>0%</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Capacity development:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Stakeholder feedback:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						<tr valign="top" align="left">
+							<td colspan="2"><b>Outputs/deliverables:</b></td>
+						</tr>
+						<tr>
+							<td colspan="2">- No data -</td>
+						</tr>
+						</table></td></tr></table></DOC>

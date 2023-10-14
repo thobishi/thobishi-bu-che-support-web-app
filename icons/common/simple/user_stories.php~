@@ -1,0 +1,167 @@
+<?php
+	define('URL', 'http://%1$s:%2$s@redmine/');
+	require_once 'simple/ActiveResource.php';
+	require_once 'simple/classTextile.php';
+
+	$textile = new Textile();
+
+	function login() {
+		header('HTTP/1.1 401 Unauthorized');
+	   	header('WWW-Authenticate: Basic realm="Login with your redmine details');
+
+	    	die('You need to login to continue');
+	}
+
+	if (empty($_SERVER['PHP_AUTH_USER']) && empty($_COOKIE['RedmineLogin'])) {
+		login();
+	}
+	elseif(empty($_COOKIE['RedmineLogin'])) {
+		$userDetails = array(
+			'user' => $_SERVER['PHP_AUTH_USER'],
+			'pass' => $_SERVER['PHP_AUTH_PW']
+		);
+		if(checkRedmine($userDetails)) {
+			setcookie('RedmineLogin', base64_encode(json_encode($userDetails)), strtotime('+1 year'));
+		}
+		else {
+			setcookie('RedmineLogin', '', time()-10);
+			login();
+		}
+	}
+	else {
+		$userDetails = json_decode(base64_decode($_COOKIE['RedmineLogin']), true);
+		if(!checkRedmine($userDetails)) {
+			setcookie('RedmineLogin', '', time()-10);
+			login();
+		}
+	}
+
+	function checkRedmine($details) {
+		$contents = @file_get_contents(sprintf(URL . '/projects.xml', $details['user'], $details['pass']));
+		return $contents === false ? false : true;
+	}
+
+	class Project extends ActiveResource {
+		var $site = URL;
+		var $request_format = 'xml';
+
+		public function __construct($userDetails) {
+			$this->site = sprintf(URL, urlencode($userDetails['user']), urlencode($userDetails['pass']));
+
+			parent::__construct();
+		}
+	}
+	
+	class Issue extends ActiveResource {
+		var $site = URL;
+		var $request_format = 'xml';
+
+		public function __construct($userDetails) {
+			$this->site = sprintf(URL, urlencode($userDetails['user']), urlencode($userDetails['pass']));
+
+			parent::__construct();
+		}
+	}
+
+	function findStories($project) {
+		global $userDetails;
+
+		$storyDir = opendir('.');
+	
+		$stories = array();
+
+		while($storyId = readdir($storyDir)) {
+			if(strpos($storyId, 'story-') !== false) {
+				$storyId = str_replace('story-', '', $storyId);
+
+				$Story = new Issue($userDetails);		
+				
+				$story = $Story->find($storyId, array('include' => 'children,relations'));
+
+				if(empty($story->error)) {
+					$stories[$story->id] = $story;	
+				}
+			}
+		}
+		closeDir($storyDir);
+		ksort($stories);
+
+		return $stories;		
+	}
+
+	function renderStory($story) {
+		global $textile;
+
+		$output = "<h4><a href=\"#\">Story #{$story->id} - {$story->subject} ({$story->status->attributes()->name})</a></h4>";
+		$output .= '<div>';
+		$output .= '<div class="buttons">';
+			$output .= "<a href=\"story-{$story->id}\" target=\"_blank\">Test this story</a>";
+			$output .= "<a href=\"http://redmine.octoplus.co.za/issues/{$story->id}\" target=\"_blank\">View this story on redmine</a>";
+			$output .= "<a href=\"http://redmine.octoplus.co.za/projects/".PROJECTID."/issues/new\" target=\"_blank\">Create new issue</a>";
+		$output .= '</div>';
+
+		//Story description
+		$output .= '<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">';
+			$output .= '<p>'.$textile->TextileThis($story->description).'</p>';
+		$output .= '</div>';	
+
+		if(!empty($story->children)) {
+			$output .= '<div>';
+			$output .= '<h3>Subtasks</h3>';
+			
+			foreach($story->children as $child) {
+				var_dump($child);
+			}
+
+			$output .= '</div>';
+		}
+
+		$output .= '</div>';
+
+		return $output;
+	}
+
+	$Project = new Project($userDetails);
+	
+	$project = $Project->find(PROJECTID);
+
+	if(empty($project->error)) {
+		$stories = findStories($project);
+	}
+	else {
+		var_dump($project);
+		setcookie('RedmineLogin', '', time()-10);
+		die('Project ID incorrect. ' . PROJECTID);
+	}
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?php echo $project->name; ?> - Stories available for testing</title>
+		<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/redmond/jquery-ui.css" type="text/css" rel="Stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#stories').accordion({
+					collapsible: true,
+					autoHeight: false,
+					active: false
+				});
+
+				$('.buttons').buttonset();			
+			});
+		</script>
+	</head>
+	<body>
+		<h2><?php echo $project->name; ?> - Stories for testing</h2>
+		<p><?php echo $textile->TextileThis($project->description); ?></p>
+		<div id="stories">
+			<?php
+				foreach($stories as $story) {
+					echo renderStory($story);
+				}
+			?>
+		</div>
+	</body>
+</html>

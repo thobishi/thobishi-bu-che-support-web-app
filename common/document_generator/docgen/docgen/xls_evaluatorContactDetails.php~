@@ -1,0 +1,93 @@
+<?php
+	ini_set("memory_limit","128M");
+	require_once("xls_generator/cl_xls_generator.php");
+	require_once ('_systems/heqc-online.php');
+	octoDB::connect ();
+
+	$search = new evalSearch();
+
+	$SQL = $search->buildSQL ("Names, Surname, Work_Number, E_mail", $_GET);
+	$SQL .= " LIMIT 0,273";
+
+	$tmpFile = sprintf("/tmp/%07d.xls",rand(0,9999999));
+	
+	$RS = mysqli_query ($SQL);
+	
+	$xmlString = <<<TXT
+<?php xml version="1.0"?>
+<Workbook>
+<Styles>
+<!-- predefined styles -->
+	<style name="plain_cell" font="Arial" bold="0" size="10" color="black" valign="top" align="left" border="thin" />
+	<style name="heading" font="Arial" bold="1" size="10" valign="top" align="left" border="thin" color="black"/>
+	<style name="date" num_format=" d mmmm yyy hh:mm:ss" />
+	<style name="currency" num_format=" R#,##0.00" />
+	<style name="percent" num_format=" 0.00%" />
+	<style name="rotation" rotation="2" text_wrap="0" />
+	<style name="border" align="center" border="dashed" />
+	<style name="url" color="dodgerblue" underline="1" />
+
+</Styles>
+<Worksheet name="Evaluators Contact Details">
+		<Print>
+			<papersize index="9" />  
+			<orientation landscape="1" />
+			<RowTitle start="1" end="1" />
+			<margin top="0.50" right="0.1" bottom="0.50" left="0.1" />
+			<Header margin="0.2">&LEvaluator Contact Details</Header>
+			<Footer margin="0.15">&LSource: HEQC-online&CPage &P of &N</Footer>
+		</Print>
+	<Table>
+	<Row height="26">
+
+TXT;
+
+	for ($i=0; $i<mysqli_num_fields($RS); $i++) {
+		$meta = mysqli_fetch_field($RS, $i);
+		$colname = (isset($search->post_titles[$meta->name]))?($search->post_titles[$meta->name]):($meta->name);
+		$xmlString .= "\t\t<cell width=\"28\" style=\"heading\">".$colname."</cell>\r\n";
+	}
+
+	$xmlString .= "\t</Row>\r\n";
+	
+	while ($row = mysqli_fetch_assoc($RS)) {
+		$xmlString .= "\t<Row height=\"38\">\r\n";
+		foreach ($row AS $value) {
+			if (substr ($value, 0, 1) == '@') {
+				$value = " ".$value;
+			}
+			$xmlString .= "\t\t<cell style=\"plain_cell\">$value</cell>\r\n";
+		}
+		$xmlString .= "\t</Row>\r\n";
+	}
+
+	$xmlString .= <<<TXT
+	</Table>
+</Worksheet>
+</Workbook>
+
+TXT;
+
+// die ($xmlString);
+	$xls = new xls($xmlString,$tmpFile,"xls_config.inc","/tmp/");
+
+	set_time_limit(0);
+
+	header("Pragma: public");
+	header("Expires: 0");
+	header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+	header("Cache-Control: public");
+	header("Content-Description: File Transfer");
+	header("Content-Type: application/octet-stream");
+	header("Content-Disposition: attachment; filename=\"evaluatorsContactDetails.xls\"");
+
+	$f = fopen($tmpFile,"rb");
+	while (!feof($f)) {
+  	      $buffer = fgets($f, 4096);
+  	      echo $buffer;
+	}
+	fclose ($f);
+//	unlink ($tmpFile);
+
+	
+?>

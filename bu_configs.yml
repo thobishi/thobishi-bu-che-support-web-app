@@ -1,0 +1,13 @@
+database:
+  - name: create database user
+    procedures:
+      - mysql -u root -p
+      - CREATE USER 'thobishi'@'10.0.0.%' IDENTIFIED BY 'TyRus20!!';
+      - GRANT ALL PRIVILEGES ON *.* TO 'thobishi'@'10.0.0.%';
+      - FLUSH PRIVILEGES;
+  - name: list databases
+    procedures:
+      - show databases;
+  - name: list created users
+    procedures:
+      - SELECT user, host FROM mysql.user;

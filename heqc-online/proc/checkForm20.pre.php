@@ -1,0 +1,6 @@
+<?php 
+$private_public = ($this->getValueFromTable("HEInstitution", "HEI_id", $this->getValueFromTable("Institutions_application", "application_id", $this->dbTableInfoArray["Institutions_application"]->dbTableCurrentID, "institution_id"), "priv_publ") == 1)?($this->getDBsettingsValue("current_doe_priv_user_id")):($this->getDBsettingsValue("current_doe_publ_user_id"));
+$to = $this->getValueFromTable("users", "user_id", $private_public, "email");
+$message = $this->getTextContent ("checkForm19", "PublicProvProgNotPartPQM");
+$this->misMailByName($to, "Programme part of PQM", $message);
+?>

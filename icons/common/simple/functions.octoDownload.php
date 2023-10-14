@@ -1,0 +1,140 @@
+<?php
+
+if (!defined('OCTODL_DIR')) die ('ERROR: system can not read the doc path');
+if (!defined('OCTODL_DOWNLOADFILE')) define ('OCTODL_DOWNLOADFILE', 'download.php');
+
+file_put_contents('php://stderr', print_r("\nfile : ".OCTODL_DIR, TRUE);
+// we use SYS_PATH for the relative path
+
+class octoDownload {
+	private $documentName;
+	private $dateCreated, $dateUpdated;
+	private $diskName;
+	private $path;
+
+
+	function __construct($docName) {
+		$this->documentName = $docName;
+		$this->path = ( defined('SYS_PATH') )?(SYS_PATH):("");
+		
+	//file_put_contents('php://stderr', print_r("FILE: ".$this->path, TRUE));
+
+	}
+
+	public function isDoc () {
+		if (!file_exists($this->getDiskpath())) return false;
+
+		return true;
+	}
+
+	public function getDateCreated () {
+		if ($this->isDoc ()) return $this->dateCreated;
+
+		return false;
+	}
+
+	public function getDateUpdated () {
+		if ($this->isDoc ()) return $this->dateUpdated;
+
+		return false;
+	}
+
+	public function getFilename () {
+		return $this->documentName;
+	}
+
+	public function getFilesize () {
+		return filesize($this->getDiskpath());
+	}
+
+	public function getMimeType () {
+
+		$known_ext = array (
+
+		  // archives
+		  'zip' => 'application/zip',
+
+		  // documents
+		  'pdf' => 'application/pdf',
+		  'doc' => 'application/msword',
+		  'xls' => 'application/vnd.ms-excel',
+		  'ppt' => 'application/vnd.ms-powerpoint',
+
+		  // executables
+		  'exe' => 'application/octet-stream',
+
+		  // images
+		  'gif' => 'image/gif',
+		  'png' => 'image/png',
+		  'jpg' => 'image/jpeg',
+		  'jpeg' => 'image/jpeg',
+
+		  // audio
+		  'mp3' => 'audio/mpeg',
+		  'wav' => 'audio/x-wav',
+
+		  // video
+		  'mpeg' => 'video/mpeg',
+		  'mpg' => 'video/mpeg',
+		  'mpe' => 'video/mpeg',
+		  'mov' => 'video/quicktime',
+		  'avi' => 'video/x-msvideo'
+		);
+
+		$ext = strtolower(substr(strrchr($this->documentName,"."),1));
+
+		if (array_key_exists($ext, $known_ext)) {
+			$mime = $known_ext[$ext];
+		} else {
+			$mime = "application/force-download";
+		  if (function_exists('mime_content_type')) {
+				$mime = mime_content_type($this->getDiskpath());
+		  } else if (function_exists('finfo_file')) {
+		    $finfo = finfo_open(FILEINFO_MIME); // return mime type
+		    $mime = finfo_file($finfo, $this->getDiskpath());
+		    finfo_close($finfo);
+  		  }
+		}
+
+		return $mime;
+	}
+
+	public function downloadFile () {
+		if (!$this->isDoc ()) return false;
+
+		set_time_limit(0);
+
+		header("Pragma: public");
+		header("Expires: 0");
+		header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+		header("Cache-Control: public");
+		header("Content-Description: File Transfer");
+		header("Content-Type: ".$this->getMimeType());
+		header("Content-Disposition: attachment; filename=\"".$this->documentName."\"");
+		header("Content-Transfer-Encoding: binary");
+		header("Content-Length: " . $this->getFilesize());
+
+		$file = @fopen($this->getDiskpath(),"rb");
+		if ($file) {
+		  while(!feof($file)) {
+		    print(fread($file, 1024*8));
+		    flush();
+		    if (connection_status()!=0) {
+		      @fclose($file);
+		      die();
+		    }
+		  }
+		  @fclose($file);
+		}
+
+		return true;
+	}
+
+
+	private function getDiskpath () {
+		return OCTODL_DIR.$this->documentName;
+	}
+
+}
+?>
+

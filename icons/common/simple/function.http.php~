@@ -1,0 +1,30 @@
+<?php
+
+function readPOST($field, $default="") {
+  $result=$default;
+  if (isset($_POST["$field"])) $result=$_POST["$field"];
+  return $result;
+}
+
+function readGET($field, $default="") {
+  $result=$default;
+  if (isset($_GET["$field"])) $result=$_GET["$field"];
+  return $result;
+}
+
+function readREQUEST($field, $default="") {
+  $result=$default;
+  if (isset($_REQUEST["$field"])) $result=$_REQUEST["$field"];
+  return $result;
+}
+
+function readPOSTCheckBoxes($startsWith) {
+  $result=array();
+  $len=strlen($startsWith);
+  foreach ($_POST as $key=>$value) {
+    if (strncmp($key, $startsWith, $len)==0) $result[]=substr($key, $len);
+  }
+  return $result;
+}
+
+?>

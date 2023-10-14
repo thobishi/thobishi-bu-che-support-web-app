@@ -1,0 +1,74 @@
+/* 
+    Document   : jquery.dropdown
+    Created on : 04 Nov 2010, 12:39:23 PM
+    Author     : wl
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.ui-dropdown {
+	display: block;
+	line-height: normal;
+}
+
+.ui-dropdown dd { position:relative; }
+.ui-dropdown dd, .ui-dropdown dt, .ui-dropdown ul { margin:0px; padding:0px; display: block;}
+
+.ui-dropdown a {
+	text-decoration: none;
+	background: #fff;
+}
+
+/* DT styles for sliding doors */
+.ui-dropdown dt a {
+    display:block; 
+	padding-right:20px;
+	width:150px;
+	padding-left: 5px;
+	color: #000;
+	font-weight: normal;
+	font-size: 90%;
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	vertical-align: text-bottom;
+}
+.ui-dropdown dt a span {cursor:pointer;}
+.ui-dropdown dt a span.ui-icon {float: right;padding:0;}
+/* UL styles */
+.ui-dropdown dd ul {
+    list-style:none; padding:0px 0px; position:absolute;
+    left:0px; top:2px; width:auto; min-width:170px;
+	height: 250px;
+	overflow: auto;
+	background-color: #fff;
+	border: 1px solid #aaa;
+}
+.ui-dropdown li {
+	margin: 0;
+	padding: 0;
+	marging-bottom: 2px;
+	clear:both;
+}
+.ui-dropdown img {
+	vertical-align: middle;
+	margin-right: 3px;
+}
+.ui-dropdown span.value { display:none;}
+.ui-dropdown dd ul li a {
+	padding:2px; display:block;
+	color: #000;
+	font-weight: normal;
+	font-size: 90%;
+}
+.ui-dropdown dd ul li a.selected {
+	background-color: highlight;
+	color: highlighttext;
+}

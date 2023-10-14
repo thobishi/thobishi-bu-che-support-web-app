@@ -1,0 +1,50 @@
+<br>
+<?php
+
+	$app_id = $this->dbTableInfoArray["Institutions_application"]->dbTableCurrentID;
+	if ($this->view != 1) {	$this->getApplicationInfoTableTopForHEI_sites($app_id); }
+	$this->displayRelevantButtons($app_id, $this->currentUserID);
+
+?>
+<table width="95%" border=0 align="center" cellpadding="2" cellspacing="2">
+<tr>
+<td colspan="2"><b>13. CONDITIONS</b><br><br></td>
+</tr>
+<tr>
+  <td valign="top">&nbsp;</td>
+	<td valign="top"><i>Please give details of all conditions set by HEQC and evidence that these have been fulfilled.</i> <br><br></td>
+</tr>
+<tr>
+  <td valign="top">&nbsp;</td>
+  <td valign="top"><b>Evidence of fulfillment of institutional and programme-specific conditions.</b><br></td>
+</tr>
+<tr>
+ 	<td colspan="2" valign="top">
+
+	<table border="1" width="95%">
+	<tr><td>Conditions</td><td>Evidence of fulfilment</td></tr>
+	<tr><td>Institutional</td><td><?php $this->showField("AC_conditions_fulfilled_inst"); ?></td></tr>
+	<tr><td>Programme-specific</td><td><?php $this->showField("AC_conditions_fulfilled_program"); ?></td></tr>
+	</table>
+
+	</td>
+</tr>
+</table>
+<fieldset >
+<legend><b>The following documentation to be uploaded as it pertains to this programme</b></legend>
+		<br>
+
+		<table width="95%" border=0 align="center" cellpadding="2" cellspacing="0">
+		<tr>
+			<td>
+			<ul>
+				<li><b>Upload any documentation which will indicate evidence of fulfilling conditions.</b>
+				<br>
+				<?php $this->makeLink("13_additional_doc") ?></li>
+			</ul>
+			</td>
+		</tr>
+		</table>
+
+		<br>
+</fieldset>

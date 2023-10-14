@@ -1,0 +1,1878 @@
+<?php xml version="1.0" encoding="ISO-8859-1" ?><DOC
+config_file="docgen/doc_config.inc"
+title="CHE Contract Register"
+subject="Consultant Expenditure Report"
+author="Octoplus Information Systems"
+manager=""
+company="Council on Higher Education"
+operator=""
+category="Report"
+keywords=""
+comment=""
+>
+
+
+<table border="0" width="100%">
+
+	<tr>
+		<td>
+		<img src="docgen/images/top_int.jpg" width="171" height="33" wrap="no" align="left" border="0" left="-2" top="-2" anchor="INCELL" />
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+			<p align="center"/><font size="24" color="#000000" align="center">Contract Register</font>
+			<p align="center"/><br /><font size="26" color="#000000" align="center"><b>Consultant Expenditure Report</b></font>
+			<p align="center"/><br /><br /><font size="16" color="#000000" align="center"><i>Generated on 16 Jan 2009</i></font>
+			<br /><br />
+			<p align="center"/><br /><br /><font size="20" color="#000000" align="center">Council on Higher Education</font>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		</td>
+	</tr>
+
+	<tr>
+		<td valign="bottom"><img src="docgen/images/footer.jpg" width="171" height="5" wrap="no" border="0" left="-2" top="1" anchor="INCELL" /></td>
+	</tr>
+
+</table>
+
+<section orientation="landscape">
+
+	<header><b>Contract Register - Consultant Expenditure Report</b></header>
+
+	<footer>
+		<table border="0">
+		<tr>
+			<td align="left">
+				<font size="10"><b>Council on Higher Education</b><tab /></font></td><td align="right"><cpagenum />/<tpagenum />
+			</td>
+		</tr>
+		</table>
+	</footer>
+
+		<table width="100%" border="t,b">
+	<tr>
+					<td bgcolor="5">Consultant type</td>
+					<td bgcolor="5">Consultant name</td>
+					<td bgcolor="5">Contract<br />Description</td>
+					<td bgcolor="5">CHE Supervisor</td>
+					<td bgcolor="5">Start date</td>
+					<td bgcolor="5">Completion date</td>
+					<td bgcolor="5">Budget</td>
+					<td bgcolor="5">YTD Expenses</td>
+					<td bgcolor="5">Contract<br />Status</td>	
+	</tr>
+	</table>
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Erica Gillard</td>
+					<td>HEQC Review</td>
+					<td>Lis Lange</td>
+					<td>2008-11-13</td>
+					<td>2009-01-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Erica Gillard</td>
+					<td>HEQC Review</td>
+					<td>Dr L Lange</td>
+					<td>2008-11-01</td>
+					<td>2009-01-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Mala Singh</td>
+					<td>HEQC External Review</td>
+					<td>Lis Lange</td>
+					<td>2008-10-01</td>
+					<td>2008-11-30</td>
+					<td>100</td>
+					<td>21169.22</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Mala Singh</td>
+					<td>Project 054 - HEQC External Review and Self Evaluation Report</td>
+					<td>Dr L Lange</td>
+					<td>2008-10-01</td>
+					<td>2008-10-30</td>
+					<td>100</td>
+					<td>21169.22</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Mala Singh</td>
+					<td>CHE Task Team on HE Institutional Atonomy</td>
+					<td>Dr L Lange</td>
+					<td>2007-08-01</td>
+					<td>2008-07-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Deon Pretoruis</td>
+					<td>Consultancy Agreement</td>
+					<td>Dr M Hay</td>
+					<td>2007-06-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Thiriloshani Padayachee</td>
+					<td>Cnsultancy Contract</td>
+					<td>Mr N Cele</td>
+					<td>2007-07-25</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Neetha Ravjee</td>
+					<td>Cordination of researcher</td>
+					<td>Dr  L Lange</td>
+					<td>2006-09-01</td>
+					<td>2007-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Neetha Ravjee</td>
+					<td>Finalise Research Project on the interaction of youth culture</td>
+					<td>Dr L Lange</td>
+					<td>2007-10-01</td>
+					<td>2007-11-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Frempong Acheampong</td>
+					<td>Audit Officer</td>
+					<td>Dr L Lange</td>
+					<td>2008-08-01</td>
+					<td>2008-11-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 C Boughey</td>
+					<td>Meta-Analysis of Teaching at the Five</td>
+					<td>Dr Lis Lange</td>
+					<td>2008-06-02</td>
+					<td>2009-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Ally Cassiem</td>
+					<td>Accreditation Directorate Assistance</td>
+					<td>Ms K Menon</td>
+					<td>2008-01-07</td>
+					<td>2008-06-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Boitumelo Rakau</td>
+					<td>Develop codes and data dictionaries in CSPro </td>
+					<td>Mr N Cele</td>
+					<td>2008-02-18</td>
+					<td>2007-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Boitumelo Rakau</td>
+					<td>Develop codes and data dictionaries in CSPro </td>
+					<td>Mr N Cele</td>
+					<td>2008-02-18</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Alan Ralphs</td>
+					<td>Preparation and drafting of the section on the HEQC Framework for Qulality Management of Delegated Responsibilities</td>
+					<td>Mr T Bhengu</td>
+					<td>2007-11-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Tamara Shefer</td>
+					<td>Develop thematic categories and codes using Atlas TI Programme </td>
+					<td>Mr N Cele</td>
+					<td>2008-02-18</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Rolf Stumpf</td>
+					<td>Provide Strategic advise on the HEQC and Standard Settings</td>
+					<td>Ms K Menon</td>
+					<td>2008-02-15</td>
+					<td>2008-03-10</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Rolf Stumpf</td>
+					<td>Provide Strategic advise on the HEQC and Standard Settings with inclisions</td>
+					<td>Ms K Menon</td>
+					<td>2008-04-01</td>
+					<td>2009-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Rolf Stumpf</td>
+					<td>HEIAAF Task Team and Drafting a chapter on steering interfering and good governace </td>
+					<td>Dr L Lange</td>
+					<td>2007-08-27</td>
+					<td>2007-11-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Rolf Stumpf</td>
+					<td>HEIAAF Task Team and Examination of funding and finanicing issues relevant to HEIAAF Enquiry</td>
+					<td>Dr M Singh</td>
+					<td>2007-05-10</td>
+					<td>2007-07-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Nokuthula Joy Shabalala</td>
+					<td>Research proposal outling the methodology for the baseline study</td>
+					<td>Mr N Cele</td>
+					<td>2007-10-01</td>
+					<td>2008-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Nokuthula Joy Shabalala</td>
+					<td>Develop thematic categories and codes using Atlas TI Programme </td>
+					<td>Mr N Cele</td>
+					<td>2007-10-01</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Crain Soudien</td>
+					<td>National Reviews</td>
+					<td>Ms K Menon</td>
+					<td>2007-08-01</td>
+					<td>2008-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Lalini Reddy</td>
+					<td>Facilitaing an evaluator preparation workshop</td>
+					<td>Mr N Cele</td>
+					<td>2007-03-18</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Mike Thurlow</td>
+					<td>Strategic advise on matter relating to Accreditation</td>
+					<td>Professor F Faller</td>
+					<td>2008-08-01</td>
+					<td>2008-12-12</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Mike Thurlow</td>
+					<td>Provide Strategic advise relating to Accreditation</td>
+					<td>Ms K Menon</td>
+					<td>2008-07-01</td>
+					<td>2008-12-12</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>Institutional Profiles</td>
+					<td>Dr L Lange</td>
+					<td>2008-04-01</td>
+					<td>2009-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>Research Directors Forum Project</td>
+					<td>Dr L Lange</td>
+					<td>2007-05-01</td>
+					<td>2007-10-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>Meta-Analysis of Research Audit Reports</td>
+					<td>Dr L Lange</td>
+					<td>2007-06-01</td>
+					<td>2008-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>SA Knowledgebase and Institutional Profiles</td>
+					<td>Dr L Lange</td>
+					<td>2007-06-01</td>
+					<td>2008-06-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>Benchmarking Project</td>
+					<td>Dr L Lange</td>
+					<td>2007-05-01</td>
+					<td>2007-11-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>State of Post Graduate Education in SA</td>
+					<td>Dr L Lange</td>
+					<td>2007-06-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 H Kotze</td>
+					<td>State of Knowledge Production is SA HE Institutions</td>
+					<td>Dr L Lange</td>
+					<td>2007-06-01</td>
+					<td>2008-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Andreas Tredoux</td>
+					<td>Analytical Chemistry Case Study</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-17</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Wellington Didibhuku  Thwala</td>
+					<td>Field work Research for student Participation in QA</td>
+					<td>Mr N Cele</td>
+					<td>2008-02-18</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Wellington Didibhuku  Thwala</td>
+					<td>Workshop document preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-07-18</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Beverley Thaver</td>
+					<td>Access retenrion and the cultural politics of SA HE</td>
+					<td>Dr M Singh</td>
+					<td>2006-01-02</td>
+					<td>2006-08-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Gary Watkins</td>
+					<td>Development and implementation of the HR Strategic Plan</td>
+					<td>Dr J Beukes</td>
+					<td>2008-09-05</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>791643.73</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Peter Vale</td>
+					<td>Drafting chapter on Academic Freedom in SA</td>
+					<td>Dr L Lange</td>
+					<td>2007-08-27</td>
+					<td>2007-11-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Peter Vale</td>
+					<td>The case for Academic Freedom</td>
+					<td>Dr M Singh</td>
+					<td>2007-05-10</td>
+					<td>2007-08-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Antionette van der Merwe</td>
+					<td>Accessment of the extent to which web based learning is used</td>
+					<td>Dr M Hay</td>
+					<td>2007-08-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Christelle Venter</td>
+					<td>Admin support in regards to data capturing of trained potential auditors evaluators and panel members for audit visits</td>
+					<td>Mr N Cele</td>
+					<td>2008-01-14</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Ehrhard Visser</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Louis van der Westhuizen</td>
+					<td>Private Provides Quality Forum</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-23</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Karen Visser</td>
+					<td>Preparation of documents for Workshop</td>
+					<td>Mr N Cele</td>
+					<td>2007-05-24</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Sharman Wickham</td>
+					<td>Evaluation of the impact of the HEQC institutional audit on HE institutional development</td>
+					<td>Dr M Hay</td>
+					<td>2007-02-10</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Sux Zietsman</td>
+					<td>QPCD Workshop preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-07-18</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Patrick Chiroro</td>
+					<td>Methodology for Baseline students proposal</td>
+					<td>Mr N Cele</td>
+					<td>2007-10-01</td>
+					<td>2008-05-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Debbie Campbell</td>
+					<td>Fictional Programme submission</td>
+					<td>Dr J Carneson</td>
+					<td>2006-01-16</td>
+					<td>2006-01-23</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Judith Helen Carpenter</td>
+					<td>Minutes of CHE Council and EXCO meetings</td>
+					<td>Dr M Singh</td>
+					<td>2007-06-18</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Andrew Crouch</td>
+					<td>Workshop document preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-27</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Linda Cornwell</td>
+					<td>QPCD Workshop preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-11-01</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Herman du Toit</td>
+					<td>Managing QA Component of South African Finland Cooperation Programme</td>
+					<td>Dr L Lange</td>
+					<td>2008-07-01</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Dolina Dowling</td>
+					<td>Auditor and report writer for DUT audit</td>
+					<td>Dr M Hay</td>
+					<td>2007-06-15</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Dolina Dowling</td>
+					<td>Critical re-write and edit of WITS draft audit report</td>
+					<td>Dr M Hay</td>
+					<td>2007-04-15</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Dolina Dowling</td>
+					<td>Auditor and report writer for Polytechnic of Namibia, TUT and UP audit </td>
+					<td>Dr M Hay</td>
+					<td>2007-01-15</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 John Farmer</td>
+					<td>QPCD Workshop preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-01</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Sarah Gravett</td>
+					<td>QPCD Workshop preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-02-08</td>
+					<td>2007-02-28</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Martin Hall</td>
+					<td>Policy Position Paper: Community Engagement in South African Higher Education</td>
+					<td>Dr C de la Rey</td>
+					<td>2008-09-15</td>
+					<td>2008-11-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Jenifer Hatton</td>
+					<td>Minutes of Accreditation related meetings, CHE Council meetings HEQC Meetings</td>
+					<td>Mr T Bhengu</td>
+					<td>2007-05-01</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Neil Hoorn</td>
+					<td>Supervise production of Profiles, finalise migration of HEMIS data</td>
+					<td>Dr L Lange</td>
+					<td>2008-06-01</td>
+					<td>2009-06-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Neil Hoorn</td>
+					<td>Training new administrator, Finalise migrationof HEMIS, support data side on the production of the state of higher education report, UKZN profile tables</td>
+					<td>Dr L Lange</td>
+					<td>2007-07-02</td>
+					<td>2008-04-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Kenneth Lee Harley</td>
+					<td>National Reviews Reports </td>
+					<td>Ms K Menon</td>
+					<td>2007-09-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 AB Heyns</td>
+					<td>Minutes of CHE Council and EXCO meetings, audits, Commitee meetings</td>
+					<td>Directors </td>
+					<td>2008-01-01</td>
+					<td>2008-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 AB Heyns</td>
+					<td>Minutes of CHE Council and EXCO meetings, audits, Commitee meetings</td>
+					<td>Directors </td>
+					<td>2007-01-01</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Ruth Jonathan</td>
+					<td>Theoretical Analysis Toward a principled framework</td>
+					<td>Dr M Singh</td>
+					<td>2006-02-01</td>
+					<td>2006-06-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Kayzuran  Jaffer</td>
+					<td>Analysis based on responces to an evaluation form, design a questionare</td>
+					<td>Dr J Carneson</td>
+					<td>2006-02-08</td>
+					<td>2006-03-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Ralph Lawrence</td>
+					<td>Auditor and report writer for UNISA audit</td>
+					<td>Dr L Lange</td>
+					<td>2008-05-15</td>
+					<td>2008-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Ralph Lawrence</td>
+					<td>Auditor and report writer for IIE audit </td>
+					<td>Dr M Hay</td>
+					<td>2007-06-01</td>
+					<td>2007-12-15</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>4 Lumkile Lalendle</td>
+					<td>Private Provides Quality Forum</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-23</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Mark Linvingstone</td>
+					<td>QPCD Workshop preparation</td>
+					<td>Mr N Cele</td>
+					<td>2007-04-23</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Thierry Moses Luescher</td>
+					<td>Scribe for Funding Commission at the Consultative Conference</td>
+					<td>Dr L Lange</td>
+					<td>2007-11-26</td>
+					<td>2008-01-11</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Thierry Moses Luescher</td>
+					<td>Seminar/TT Meeting Preparation HEIAAF Research report</td>
+					<td>Ms C Clarke</td>
+					<td>2007-04-01</td>
+					<td>2007-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Thierry Moses Luescher</td>
+					<td>Triennial Review of the Higher Education Project</td>
+					<td>Dr L Lange</td>
+					<td>2007-01-01</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Mary Metcalfe</td>
+					<td>National Reviews Seminar</td>
+					<td>Mr N Cele</td>
+					<td>2007-11-01</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Relebohile Moltesane</td>
+					<td>Methodology for Baseline students proposal</td>
+					<td>Mr N Cele</td>
+					<td>2007-10-01</td>
+					<td>2008-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Konnie Naidoo</td>
+					<td>Private Provides Quality Forum</td>
+					<td>Mr N Cele</td>
+					<td>2007-08-23</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Barbara Morrow</td>
+					<td>Website</td>
+					<td>Dr L Lange</td>
+					<td>2007-06-01</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>2 Barbara Morrow</td>
+					<td>Website developement</td>
+					<td>Dr L Lange</td>
+					<td>2008-01-01</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Heather Nel</td>
+					<td>Developing speaker notes and programmes for HEQC workshop on Quality Arrangements</td>
+					<td>Dr H du Toit</td>
+					<td>2007-03-30</td>
+					<td>2007-05-28</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Jan Nieuwenhuis</td>
+					<td>Preparation of letters and report for Accreditation. Attendance of Accreditation Meeting</td>
+					<td>Mr T Bhengu and Ms K Menon</td>
+					<td>2008-04-01</td>
+					<td>2009-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>1 Gerald Wangenge Ouma</td>
+					<td>Meta-Analysis of UCT, Stellenbosch University and Rhodes</td>
+					<td>Dr L Lange</td>
+					<td>2008-06-03</td>
+					<td>2008-06-13</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Consultant</td>
+					<td>3 Nic Olivier</td>
+					<td>Examination of Constitutional Issues relevant to HEIAAF Enquiry</td>
+					<td>Dr M Singh</td>
+					<td>2007-05-10</td>
+					<td>2007-07-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>2 Mary Reynolds</td>
+					<td>Travel services </td>
+					<td>Christa Smit</td>
+					<td>2005-04-01</td>
+					<td>2007-04-01</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>2 Mary Reynolds</td>
+					<td>Service Level Agreement (Tender)</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-05-01</td>
+					<td>2009-05-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 J Herbest</td>
+					<td>AURO Group Contract</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-02-01</td>
+					<td>2009-02-01</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 A Carstens</td>
+					<td>Altimax - Project Close of Report</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-07-01</td>
+					<td>2007-07-10</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 A Carstens</td>
+					<td>Altimax - Management Accounting Proposal</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-02-08</td>
+					<td>2009-02-02</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 A Carstens</td>
+					<td>Altimax - Risk Management Proposal</td>
+					<td>Dr JH Beukes</td>
+					<td>2006-09-01</td>
+					<td>&nbsp;</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 A Carstens</td>
+					<td>Altimax - Finansial Management Proposal</td>
+					<td>Dr JH Beukes</td>
+					<td>2006-07-17</td>
+					<td>&nbsp;</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Kay Mthethwa</td>
+					<td>Convers </td>
+					<td>DR L Lange</td>
+					<td>2007-07-02</td>
+					<td>2007-09-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 EJ DÁlton</td>
+					<td>Gijima Maintenance and Support Service Agreement</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-01-01</td>
+					<td>2007-12-01</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>2 C Naude</td>
+					<td>Hydro Heatth Service and Maintenace Contract</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-04-01</td>
+					<td>2008-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>2 Angela Mackay</td>
+					<td>Mackies Purchase Order</td>
+					<td>DR JH Beukes</td>
+					<td>2008-03-31</td>
+					<td>2008-08-06</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>2 Mary Reyolds</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Hans de Roos</td>
+					<td>Small B usiness Intelligence</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-06-01</td>
+					<td>&nbsp;</td>
+					<td>48336</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Hans de Roos</td>
+					<td>Contract Register</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-06-02</td>
+					<td>2009-07-31</td>
+					<td>55700.4</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Hans de Roos</td>
+					<td>Information Network System</td>
+					<td>Dr Lis Lange</td>
+					<td>2008-06-01</td>
+					<td>2009-07-31</td>
+					<td>68400</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Hans de Roos</td>
+					<td>Maintenance Contract</td>
+					<td>Dr Lis Lange</td>
+					<td>2006-03-01</td>
+					<td>2008-12-31</td>
+					<td>1208192</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Johan Malan</td>
+					<td>Iqual Database</td>
+					<td>Ms C Smit</td>
+					<td>2006-03-30</td>
+					<td>&nbsp;</td>
+					<td>83750</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Johan Malan</td>
+					<td>Predicure - Phase 3</td>
+					<td>Ms C Smit</td>
+					<td>2004-04-01</td>
+					<td>2006-03-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Johan Malan</td>
+					<td>Predicure Maintenance Contract</td>
+					<td>Mrs C Smit</td>
+					<td>2008-03-31</td>
+					<td>2009-03-31</td>
+					<td>26700</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>Agreement LEase  Jan 2004</td>
+					<td>Prof S Badat</td>
+					<td>2004-05-03</td>
+					<td>2007-05-01</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>Lease Agreement Building Rent</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-05-01</td>
+					<td>2012-05-01</td>
+					<td>1652024</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>Lease Agreement Security</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-05-01</td>
+					<td>2012-05-01</td>
+					<td>80000</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>Lease Agreement Clearning Services</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-05-01</td>
+					<td>2012-05-01</td>
+					<td>71500</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>3 Luzy Coetzee</td>
+					<td>Lease Agreement Water & Electricity</td>
+					<td>Dr JH Beukes</td>
+					<td>2008-05-01</td>
+					<td>2012-05-01</td>
+					<td>150000</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Sam Isaacs</td>
+					<td>National Learners Record Database</td>
+					<td>Dr Lis Lange</td>
+					<td>2007-10-01</td>
+					<td>2008-03-31</td>
+					<td>648000</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Sam Isaacs</td>
+					<td>National Learners Record Database 2008_09</td>
+					<td>Dr Lis Lange</td>
+					<td>2008-06-01</td>
+					<td>2009-09-30</td>
+					<td>764000</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Sam Isaacs</td>
+					<td>National Learners Record Database 2009-2010</td>
+					<td>Dr Lis Lange</td>
+					<td>2009-04-01</td>
+					<td>2010-09-30</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Active</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Service Provider</td>
+					<td>1 Maruis Pretoruis</td>
+					<td>Recruitment process</td>
+					<td>Dr JH Beukes</td>
+					<td>2007-01-01</td>
+					<td>2008-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+	<table width="100%" border="t,b">
+
+	<tr>
+					<td>Report writer</td>
+					<td>3 G Maree</td>
+					<td>Publication Contract</td>
+					<td>Dr L Lange</td>
+					<td>2006-01-24</td>
+					<td>2007-12-31</td>
+					<td>0</td>
+					<td>&nbsp;</td>
+					<td>Expired/Terminated</td>
+	</tr>
+
+	</table>
+
+</section>
+	
+</DOC>

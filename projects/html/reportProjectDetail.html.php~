@@ -1,0 +1,235 @@
+
+<?php echo //$rpt = new reportGenerator();
+function fmt_value($val){
+
+	$fmt = ($val > "") ? $val : "&nbsp;";
+	if ($fmt == '1970-01-01') $fmt = "&nbsp;";
+
+	return $fmt;
+}
+
+function getCoreMandate ($prj){
+
+	$htm = "";
+
+	$sql = <<<sqlM
+		SELECT *
+		FROM project_detail_mandate,
+			lkp_che_mandate
+		WHERE project_detail_mandate.che_mandate_ref = lkp_che_mandate.lkp_che_mandate_id
+		AND project_detail_mandate.project_ref = '$prj'
+		ORDER BY weight
+sqlM;
+
+	$rs = mysqli_query($sql) or die(mysqli_error());
+
+	$htm .= "<table>";
+
+	while ($row = mysqli_fetch_array($rs)){
+		$htm .= "<tr>";
+		$htm .= "<td>".$row["mandate_full"]."</td>";
+		$htm .= "<tr>";
+	}
+
+	$htm .= "</table>";
+
+	return $htm;
+}
+
+function getProjectTeam($prj){
+	$htm = "";
+
+	$tsql = <<<tsql
+		SELECT * FROM project_team, project_personnel
+		WHERE project_team.personnel_ref = personnel_id
+		AND project_ref = $prj;
+tsql;
+	$trs = mysqli_query($tsql) or die(mysqli_error());
+
+	$htm .= "<table>";
+
+	if (mysqli_num_rows($trs) > 0){
+
+		$htm .= "<tr>";
+		$htm .= "<td class='oncolourb' width='20%'>Name</td>";
+		$htm .= "<td class='oncolourb' width='20%'>Role</td>";
+		$htm .= "<td class='oncolourb' width='20%'>Email</td>";
+		$htm .= "<td class='oncolourb' width='20%'>Telephone</td>";
+		$htm .= "</tr>\n";
+
+		while ($trow = mysqli_fetch_array($trs)){
+			$htm .= "<tr>";
+			$htm .= "<td>".fmt_value($trow["personnel_name"])."</td>";
+			$htm .= "<td>".fmt_value($trow["role"])."</td>";
+			$htm .= "<td>".fmt_value($trow["email"])."</td>";
+			$htm .= "<td>".fmt_value($trow["work_telephone_no"])."</td>";
+			$htm .= "</tr>\n";
+		}
+
+	} else {
+
+		$htm .= "<tr><td colspan='4'>There is no project team data.</td></tr>";
+	}
+
+	$htm .= "</table>";
+
+	return $htm;
+}
+
+?>
+<br>
+<table width="99%" border=0 align="center" cellpadding="2" cellspacing="2">
+<tr><td>
+
+This report displays information per project. Projects may be searched by budget year and project code.
+<br>
+<?
+	$doc = new octoDocGen ("projectDetail", "budget=20072008");
+	$doc->url ();
+?>
+<br>
+
+
+<?
+	$budget_year   = (isset($_POST['budget_year']) && $_POST['budget_year'] != "") ? $_POST['budget_year'] : "";
+	$project_ref = (isset($_POST['project_ref']) && $_POST['project_ref'] != "") ? $_POST['project_ref'] : "";
+
+	$this->formFields["budget_year"]->fieldValue = $budget_year;
+	$this->formFields["project_ref"]->fieldValue = $project_ref;
+?>
+
+<table width="100%" border=0 align="center" cellpadding="2" cellspacing="2">
+
+<tr align="right">
+	<td width="15%">
+		Budget year:
+	</td>
+	<td width="40%" align="left">
+		<?php echo $this->showField('budget_year');	?>
+	</td>
+</tr>
+
+<tr align="right">
+	<td>Select Project:</td>
+	<td align="left"><?php echo echo $this->showField('project_ref'); ?></td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td align="left">
+		<input type="submit" class="btn" name="submitButton" value="Create report" onClick="moveto('stay');">
+	</td>
+</tr>
+
+</table>
+<br>
+<?
+
+if (isset($_POST['submitButton']))
+{
+	$html = "";
+
+	$whereArr = array(1);
+	if (isset($_POST['budget_year']) && $_POST['budget_year'] > ''){
+		array_push($whereArr,"budget_year = '".$_POST['budget_year']."'");
+	}
+	if (isset($_POST['project_ref']) && $_POST['project_ref'] > 0){
+		array_push($whereArr,"proj_code = '".$_POST['project_ref']."'");
+	}
+
+	$where = "WHERE " . implode(" AND ", $whereArr);
+
+	$sql = "SELECT * FROM project_detail " . $where;
+
+	$rs = mysqli_query($sql);
+	if (mysqli_num_rows($rs) > 0){
+
+		while ($row = mysqli_fetch_array($rs)){
+
+			$html .= "<span class='specialb'>Project: ".$row["proj_code"] ." ". $row["project_short_title"] . "</span>";
+			$html .= "<p>";
+
+			$html .= "<table width='95%' border='1' align='center' cellpadding='2' cellspacing='0'>";
+			$html .= "<tr><td class='oncolourb' width='20%'>Directorate</td>";
+			$html .= "<td>".fmt_value($this->getValueFromTable("lkp_directorate","lkp_directorate_id",$row["directorate_ref"],"lkp_directorate_description"))."</td></tr>\n";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Project code</td>";
+			$html .= "<td>".fmt_value($row["proj_code"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Project title (short)</td>";
+			$html .= "<td>".fmt_value($row["project_short_title"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Project title (full)</td>";
+			$html .= "<td>".fmt_value($row["project_full_title"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Core Mandate<br>(in order of relevance)</td>";
+			$html .= "<td>".getCoreMandate($row["project_id"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Phase</td>";
+			$html .= "<td>".fmt_value($row["phase"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Planned start date</td>";
+			$html .= "<td>".fmt_value($row["planned_start_date"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Planned end date</td>";
+			$html .= "<td>".fmt_value($row["planned_end_date"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Budget year</td>";
+			$html .= "<td>".fmt_value($row["budget_year"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Planned budget</td>";
+			$html .= "<td>R ".sprintf("%01.2f",$row["planned_budget"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Background and rationale</td>";
+			$html .= "<td>".fmt_value($row["background_rationale"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Project goals</td>";
+			$html .= "<td>".fmt_value($row["goals"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Design and methodology</td>";
+			$html .= "<td>".fmt_value($row["methodology_design"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Beneficiaries and stakeholders</td>";
+			$html .= "<td>".fmt_value($row["beneficiaries"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Deliverables and planned outputs</td>";
+			$html .= "<td>".fmt_value($row["deliverables"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Capacity development</td>";
+			$html .= "<td>".fmt_value($row["capacity_development"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Stakeholder feedback</td>";
+			$html .= "<td>".fmt_value($row["stakeholder_feedback"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr><td class='oncolourb' width='20%'>Outputs achieved</td>";
+			$html .= "<td>".fmt_value($row["outputs_deliverables"])."</td>";
+			$html .= "</tr>\n";
+			$html .= "<tr>";
+			$html .= "<td class='oncolourb' width='20%'>Project Team</td>";
+			$html .= "<td>";
+			$html .= getProjectTeam($row["project_id"]);
+			$html .= "</td>";
+			$html .= "</tr>";
+			$html .= "</table>";
+
+			$html.= '<p class="pagebreak">&nbsp;</p>';
+
+		}
+
+		echo $html;
+
+//		$rpt->getData("sql",$sql);
+//		$rpt->structureData("2",TRUE);
+//		$rpt->writeData("doc");
+//		$rpt->showData();
+	}
+	else
+	{
+		echo "<tr align='center'><td>No data has been found matching your criteria.</td></tr>";
+	}
+
+
+} // end if (isset($_POST['submitButton'])
+?>
+</td></tr>
+</table>
+<br>

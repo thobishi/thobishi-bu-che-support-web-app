@@ -1,0 +1,122 @@
+<?php
+
+define ('TAX_PAYE',0.25);
+define ('TAX_UIF', 0.01);
+
+class contractRegister extends miscellaneous {
+
+	var $relativePath;
+	/**
+	 * default constructor
+	 *
+	 * this function calls the {@link workFlow} function.
+	 * @author Diederik de Roos
+	 * @param integer $flowID
+	*/
+	function contractRegister ($flowID) {
+		$this->readPath ();
+		$this->workFlow ($flowID);
+		$this->populatePublicHolidays ();
+	}
+
+	function readPath () {
+		global $path;
+
+		$this->relativePath = (isset($path))?($path):("");
+	}
+
+	function displayContractHeader($cons_id,$contract_id="",$func=""){
+		$consultant_name = $this->getValueFromTable("d_consultants", "consultant_id", $cons_id, "name")." ".$this->getValueFromTable("d_consultants", "consultant_id", $cons_id, "surname");
+		$company = $this->getValueFromTable("d_consultants", "consultant_id", $cons_id, "company");
+		$consultant = ($this->getValueFromTable("d_consultants", "consultant_id", $cons_id, "type") == "2") ? $company : $consultant_name;
+		$contract = ($contract_id > 0) ? $this->getValueFromTable("d_consultant_agreements", "agreement_id", $contract_id, "description"):"";
+
+		$consultant = ($consultant > "") ? $consultant . ": " : "";
+		$contract = ($contract > "") ? $contract . "-" : "";
+
+		$head = <<<HEAD
+			<span class="loud">$consultant $contract $func</span>
+HEAD;
+		return $head;
+	}
+
+	function build_where_criteria($ecrit){
+		$whr_arr = array();
+		$whr = "";
+		$where = "";
+		if ($ecrit > ""){
+			// $ecrit is in format: ; separates values. : separates accno and description
+			// 1. get values in an array.
+			$val_arr = explode(";",$ecrit);
+			foreach ($val_arr as $val){
+				$flds = explode(":",$val);
+				if ($flds[0] > ""){
+					$whr = "AccNumber = '".$flds[0]."'";
+				}
+				if (isset($flds[1]) && $flds[1] > ""){
+					$whr .= " AND trim(description) = '".$flds[1]."'";
+				}
+				array_push($whr_arr,$whr);
+			}
+			$where = "(" . implode(") AND (",$whr_arr) . ")";
+		}
+		return $where;
+	}
+
+	function getSumExpenditure($ecrit){
+		$expenditure = 0;
+
+		$where = contractRegister::build_where_criteria($ecrit);
+		if (!$where > "") return 0;
+
+		$sqlF = <<<sqlF
+			SELECT sum(Amount) as expenditure
+			FROM pastel_ledger_transactions
+			WHERE $where
+sqlF;
+
+		$rsF = mysqli_query($sqlF) or die(mysqli_error());
+		if (1 == mysqli_num_rows($rsF)){
+			$rowF = mysqli_fetch_array($rsF);
+			$expenditure = (1==0)?($rowF["expenditure"]):(contractRegister::computeExpense($rowF["expenditure"]));  // this should be the c value. Only apply the PAYE-UIF function if not a service provider
+		}
+
+
+		return $expenditure;
+	}
+
+	function searchConsult($sql)
+	{
+		$arr = array();
+		$query = mysqli_query($sql) or die(mysqli_error());
+		if(mysqli_num_rows($query) > 0)
+			return $query;
+		return $arr;
+	}
+
+	function computePayeUIF($amount)
+	{
+		$percentagePAYE = TAX_PAYE;
+		$percentageUIF = TAX_UIF;
+
+		if(($amount <= 0) || !(is_numeric($amount)))
+			return 0;
+
+		$paye = $amount * $percentagePAYE;
+		$uif  = $amount * $percentageUIF;
+		return ($paye + $uif);
+	}
+
+	function computeExpense($amount)
+	{
+		$percentagePAYE = TAX_PAYE;
+		$percentageUIF = TAX_UIF;
+
+		if(($amount <= 0) || !(is_numeric($amount)))
+			return 0;
+
+		$amount = $amount + (($amount * $percentagePAYE) + ($amount * $percentageUIF));
+		return $amount;
+	}
+}
+?>

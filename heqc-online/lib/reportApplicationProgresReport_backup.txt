@@ -1,0 +1,129 @@
+	function applicationProgressReport ($institution="", $process_number=5, $status="", $last_process=false, $is_CHE=false) {
+
+		if ($institution > "") {
+			if (! is_array($institution) ) {
+				$institution = array($institution);
+			}
+		}else {
+			$institution = array($this->getValueFromTable("users", "user_id", $this->currentUserID, "institution_ref"));
+		}
+		$searchArr = array();
+		$sqlArr = array();
+		$searchCrit = array();
+		$iframeText = "";
+		$post_array = array("HEI_id");
+		$title_array = array("Institution");
+		array_push($sqlArr, "HEI_id IN ('".implode("', '", $institution)."')");
+		foreach ($institution AS $value) {
+			array_push($searchCrit, $title_array[0] . ": " . $this->formFields["HEI_id"]->fieldValuesArray[$value]);
+		}
+
+		$this->createSubmittedApplicationsTempTable();
+
+$SQL = <<<SQLselect
+		SELECT
+			HEInstitution.HEI_name,
+			Institutions_application.application_id,
+			Institutions_application.program_name as Program,
+			IF(Institutions_application.CHE_reference_code='', "-- Not Submitted --", Institutions_application.CHE_reference_code) AS CHE_reference_code,
+			CONCAT(name, ': ', users.email) as Process_User,
+			processes.processes_desc as Process,
+			tmp_ap.last_updated,
+			tmp_ap.user_ref,
+			tmp_ap.active_processes_id,
+			lkp_process_status.lkp_process_status_desc,
+			count(*) as Nr_Invoice,
+			sum(payment.invoice_total) AS Invoice,
+			sum(IF(payment.received_confirmation=1,payment.invoice_total,0)) AS Paid
+		FROM (tmp_ap, processes, users)
+		LEFT JOIN Institutions_application on Institutions_application.application_id = tmp_ap.application_id
+		LEFT JOIN HEInstitution on HEI_id = Institutions_application.institution_id
+		LEFT JOIN lkp_process_status on lkp_process_status_id = tmp_ap.status
+		LEFT JOIN payment ON payment.application_ref = Institutions_application.application_id
+		WHERE tmp_ap.processes_ref = processes.processes_id
+			AND tmp_ap.user_ref = users.user_id
+			AND Institutions_application.application_id is not null
+SQLselect;
+
+		$SQL = (count($sqlArr) > 0)?($SQL." AND (" . implode(" AND ", $sqlArr).")"):($SQL);
+		$SQL = ($is_CHE)?($SQL):($SQL." AND processes_ref IN (5,46)");//$SQL." AND (" . implode(" AND ", $sqlArr).")"
+		$SQL .= "GROUP BY HEInstitution.HEI_id,
+			HEInstitution.HEI_name,Program,
+			CHE_reference_code,Process_User,Process,
+			tmp_ap.last_updated,
+			tmp_ap.status
+		ORDER by HEInstitution.HEI_Name, CHE_reference_code,
+			Institutions_application.program_name, tmp_ap.last_updated";
+
+		/*
+			$SQL = "SELECT Persnr, Names, Surname, Work_Number, E_mail FROM ".implode (", ", $tableArray)." WHERE 1 ";
+			$SQL = (count($sqlArr) > 0)?($SQL." AND (" . implode(" AND ", $sqlArr).")"):($SQL);
+			$SQL = ((count($searchArr) > 0) && ((count($sqlArr) > 0)))?($SQL):($SQL);
+			$SQL = (count($searchArr) > 0)?($SQL." AND (".implode(" OR ", $searchArr).")"):($SQL);
+			$SQL .= "ORDER BY number_evals, Surname,Names";
+		*/
+
+			if ($rs = mysqli_query($SQL)) {
+
+			/*
+				$iframeText .= "Please note that each alternate coloured section represents one application.";
+				$iframeText .= "Each column represents the following:";
+				$iframeText .= "<ul>";
+				$iframeText .= "<li><b>Institution</b> - clicking on this will bring up your institutional profile. It will be the same for every application</li>";
+				$iframeText .= "<li><b>Programme</b></li>";
+				$iframeText .= "<li><b>CHE ref no.</b></li>";
+				$iframeText .= "<li><b>Institution</b></li>";
+				$iframeText .= "<li><b>With user</b></li>";
+				$iframeText .= "<li><b>Process</b></li>";
+				$iframeText .= "<li><b>Institution</b></li>";
+				$iframeText .= "<li><b>Date last accessed</b></li>";
+				$iframeText .= "<li><b>Status</b></li>";
+				$iframeText .= "<li><b>Amount due</b></li>";
+				$iframeText .= "<li><b>Paid</b></li>";
+				$iframeText .= "<li><b>Admin action</b></li>";
+				$iframeText .= "<li><b>Accreditation status</b></li>";
+				$iframeText .= "</ul>";
+			*/
+			    $iframeText .= "<table border='1' width='95%' align='center'>\n";
+				$prevProgram = "";
+				$bgColor = "#EAEFF5";
+				$n=0;
+				if (mysqli_num_rows($rs) > 0){
+					$iframeText .= "<tr class='onblueb'><td colspan=\"7\"><b>Application Progress Report for </b>". implode('',$searchCrit) ."</td><td colspan=\"4\" align=\"right\"><b>Total Rows: ".mysqli_num_rows($rs)."</b></td></tr>";
+					$iframeText .= "<tr class='onblueb'><td colspan=\"11\">&nbsp;</td>";
+					$iframeText .= "<tr class='onblueb'><td><b>Institution</b></td><td><b>Program</b></td><td><b>CHE Ref No</b></td><td><b>User</b></td><td><b>Process</b></td><td><b>Date</b></td><td><b>Status</b></td><td><b>Amount</b></td><td><b>Paid</b></td><td><b>Admin Action</b></td></tr>\n";
+				    while ($row = mysqli_fetch_array($rs)) {
+						$admin_action = '&nbsp;';
+						if ($row["application_id"]!= $prevProgram){
+							$n+=1;
+						}
+						$bgColor = (fmod($n,2)) ?("#EAEFF5"):("#c0c0c0");
+						$iframeText .= "<tr bgcolor='" . $bgColor . "'>\n";
+
+						$tmpSettings = "PREV_WORKFLOW=36%7C213&DBINF_HEInstitution___HEI_id=".$this->getValueFromTable("Institutions_application", "application_id",$row["application_id"], "institution_id")."&DBINF_institutional_profile___institution_ref=".$this->getValueFromTable("Institutions_application", "application_id",$row["application_id"], "institution_id")."&DBINF_Institutions_application___application_id=".$row["application_id"];
+
+						$iframeText .= "<td valign='top'>".'<a href="javascript:winPrintInstProfileForm(\'Institutional Profile\',\''.$this->getValueFromTable("Institutions_application", "application_id",$row["application_id"], "institution_id").'\', \''.base64_encode($tmpSettings).'\', \'\');">'.$row["HEI_name"]."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["Program"] ."</td>\n";
+						$iframeText .= "<td valign='top' nowrap>". '<a href="javascript:winPrintApplicationForm(\'Application Form\',\''.$row["application_id"].'\', \''.base64_encode($tmpSettings).'\', \'\');">'.$row["CHE_reference_code"].'</a>' . "</td>\n";
+						$iframeText .= "<td valign='top'>". $row["Process_User"] ."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["Process"] ."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["last_updated"] ."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["lkp_process_status_desc"] ."</td>\n";
+		//				$iframeText .= "<td valign='top'>". $row["Nr_Invoice"] ."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["Invoice"] ."</td>\n";
+						$iframeText .= "<td valign='top'>". $row["Paid"]."</td>\n";
+
+						$admin_action = ((($this->currentUserID != $row['user_ref']) && ($row["Process"] == 'Accreditation Application Form') && ($this->currentUserID == $this->getValueFromTable("Institutions_application", "application_id",$row["application_id"], "user_ref")) && ($row["lkp_process_status_desc"] != 'complete'))?('<a href="javascript:adminTakeApp('.$row["active_processes_id"].');">Take back</a>'):('&nbsp;'));
+						$iframeText .= "<td valign='top'>".$admin_action."</td></tr>\n";
+
+						$prevProgram = $row["application_id"];
+					}
+				}else {
+					$iframeText .= "<tr><td colspan='2' align='center'><b>No results found!</b></td></tr>\n";
+				}
+			    $iframeText .= "</table>\n";
+			}
+			echo $iframeText;
+//		}
+
+	}

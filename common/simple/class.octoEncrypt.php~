@@ -1,0 +1,39 @@
+<?php
+
+class octoEncrypt {
+	private $securekey;
+
+    function __construct($textkey) {
+        $this->securekey = hash('sha256',$textkey,TRUE);
+    }
+
+	public function encrypt($string) {
+		$result = '';
+		for($i=0; $i<strlen($string); $i++) {
+			$char = substr($string, $i, 1);
+			$keychar = substr($this->securekey, ($i % strlen($this->securekey))-1, 1);
+			$char = chr(ord($char)+ord($keychar));
+			$result.=$char;
+		}
+
+		return 'HEQC_'.base64_encode($result);
+	}
+
+	public function decrypt($string) {
+		if (strncmp($string, 'HEQC_', 5)) return $string;
+		$string = substr ($string, 5);
+	//	die ($string);
+		$result = '';
+		$string = base64_decode($string);
+
+		for($i=0; $i<strlen($string); $i++) {
+			$char = substr($string, $i, 1);
+			$keychar = substr($this->securekey, ($i % strlen($this->securekey))-1, 1);
+			$char = chr(ord($char)-ord($keychar));
+			$result.=$char;
+		} 
+		return $result;
+	}
+}
+
+?>

@@ -1,0 +1,48 @@
+th a.filterLink {
+	background: url('../img/filter-disabled.png') 0% 50% no-repeat;
+}
+
+th a.filter-active {
+	background: url('../img/filter.png') 0% 50% no-repeat;
+}
+
+div.filterBox {
+	padding: 5px;
+	-moz-box-shadow: 2px 2px 5px #aaa;
+	-webkit-box-shadow: 2px 2px 5px #aaa;
+	box-shadow: 2px 2px 5px #aaa;
+	z-index: 2000;
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+div.filterCheckboxes {
+	max-height: 250px;
+	overflow: auto;
+	margin: 0;
+}
+
+div.filterCheckboxes.required label, div.filterCheckboxes label {
+	font-weight: normal;
+	font-size: 100%;
+}
+
+div.filterCheckboxes.required label:after {
+	content: '';
+}
+
+div.filterCheckbox {
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+}
+
+div.filterCheckbox input[type="checkbox"] {
+	margin: 3px 5px 2px 2px;
+}
+
+div.filterButtons {
+	margin: 0;
+	text-align: center;
+}

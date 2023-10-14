@@ -1,0 +1,21 @@
+.table{
+	border: 1px solid #000000;
+	border-collapse: separate;
+	
+}
+table.table-income td.tdLast{
+	display: none;
+}
+table th {
+    background-color: #8995B0;
+    color: #FFFFFF;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+table td{
+	border-left: 1px solid #000000!important;
+	border-top: 1px solid #000000!important;
+}
+div.form-actions{
+	display: none;
+}

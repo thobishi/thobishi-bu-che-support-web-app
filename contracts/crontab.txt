@@ -1,0 +1,2 @@
+MAILTO=evrard@octoplus.co.za
+56 16 * * * php che_contract_auto_reminder.php
